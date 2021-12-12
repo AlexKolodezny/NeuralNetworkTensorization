@@ -1,10 +1,8 @@
-from typing import Tuple, List
+from typing import Tuple
 import torch
 from torch import Tensor
 from torch import nn
 from typing import Tuple
-from functools import reduce
-import operator
 from torch.nn import init
 import math
 
@@ -12,21 +10,7 @@ import tensornetwork as tn
 
 from torch.nn.parameter import Parameter
 
-from torch.nn.init import _no_grad_normal_
-
-
-def mul(iterative):
-    return reduce(operator.mul, iterative)
-
-
-def xavier_normal(tensor: Tensor, in_dim: List[int], out_dim: List[int]=None, gain: float=1.0)->Tensor:
-    fan_in = mul([dim for i, dim in enumerate(tensor.shape) if i in in_dim])
-    if out_dim is None:
-        fan_out = mul([dim for i, dim in enumerate(tensor.shape) if i not in in_dim])
-    else:
-        fan_out = mul([dim for i, dim in enumerate(tensor.shape) if i in out_dim])
-    std = gain * math.sqrt(2.0 / float(fan_in + fan_out))
-    return _no_grad_normal_(tensor, 0., std)
+from src.utils import mul, xavier_normal
     
 
 class TT(nn.Module):
@@ -49,7 +33,7 @@ class TT(nn.Module):
         self.output_shape = output_shape
         self.ranks = (1,) + ranks + (1,)
         if bias:
-            self.bias = Parameter(torch.empty(reduce(operator.mul, self.output_shape), **factory_kwargs))
+            self.bias = Parameter(torch.empty(mul(self.output_shape), **factory_kwargs))
         else:
             self.register_parameter("bias", None)
         self.cores = nn.ParameterList([
@@ -62,7 +46,7 @@ class TT(nn.Module):
         for i, _ in enumerate(self.cores):
             xavier_normal(self.cores[i], [0, 2], [1, 3])
         if self.bias is not None:
-            fan_in = reduce(operator.mul, self.input_shape)
+            fan_in = mul(self.input_shape)
             bound = 1 / math.sqrt(fan_in) if fan_in > 0 else 0
             init.uniform_(self.bias, -bound, bound)
     

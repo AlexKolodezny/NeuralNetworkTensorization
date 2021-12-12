@@ -4,6 +4,26 @@ import numpy as np
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 import random
+from functools import reduce
+import operator
+from torch import Tensor
+from typing import List
+import math
+from torch.nn.init import _no_grad_normal_
+
+
+def mul(iterative):
+    return reduce(operator.mul, iterative)
+
+
+def xavier_normal(tensor: Tensor, in_dim: List[int], out_dim: List[int]=None, gain: float=1.0)->Tensor:
+    fan_in = mul([dim for i, dim in enumerate(tensor.shape) if i in in_dim])
+    if out_dim is None:
+        fan_out = mul([dim for i, dim in enumerate(tensor.shape) if i not in in_dim])
+    else:
+        fan_out = mul([dim for i, dim in enumerate(tensor.shape) if i in out_dim])
+    std = gain * math.sqrt(2.0 / float(fan_in + fan_out))
+    return _no_grad_normal_(tensor, 0., std)
 
 
 def set_random_seed(seed):
