@@ -100,7 +100,3 @@ class TRL(nn.Module):
         return 'input_shape={}, output_features={}, input_ranks={}, output_rank={}, bias={}'.format(
             self.input_shape, self.output_features, self.input_ranks, self.output_rank, self.bias is not None
         )
-
-        
-
-        
