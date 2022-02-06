@@ -10,6 +10,7 @@ import tensornetwork as tn
 
 from torch.nn.parameter import Parameter
 from src.utils import mul, xavier_normal
+from torch.nn.init import _no_grad_normal_
 
 
 class TTRL(nn.Module):
@@ -53,14 +54,26 @@ class TTRL(nn.Module):
             ))
             for i in range(len(self.output_shape))
         ])
+
         self.reset_parameters()
 
+    def calculate_std(self) -> float:
+        fan_in = float(mul([mul(shape) for shape in self.input_shape]))
+        fan_out = float(mul(self.output_shape))
+
+        tensor_variance = float(mul([mul(ranks) for ranks in self.input_ranks]))
+        tensor_variance *= float(mul(self.output_rank))
+        # TODO wrong formula
+        return (2 / (fan_in + fan_out) / tensor_variance) \
+            **(1/(sum([len(ranks) for ranks in self.input_ranks]) + len(self.output_rank) + 1))
+
     def reset_parameters(self) -> None:
+        std = self.calculate_std()
         for i, _ in enumerate(self.factors):
-            xavier_normal(self.factors[i], [0, 1], [2])
-        xavier_normal(self.core, list(range(len(self.input_shape))), [len(self.input_shape)])
+            _no_grad_normal_(self.factors[i], 0, std)
+        _no_grad_normal_(self.core, 0, std)
         for j, _ in enumerate(self.output_factor):
-            xavier_normal(self.output_factor[j], [0, 1], [2])
+            _no_grad_normal_(self.output_factor[j], 0, std)
         if self.bias is not None:
             fan_in = mul([mul(shape) for shape in self.input_shape])
             bound = 1 / math.sqrt(fan_in) if fan_in > 0 else 0
