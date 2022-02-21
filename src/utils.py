@@ -11,6 +11,7 @@ from typing import List
 import math
 from torch.nn.init import _no_grad_normal_
 
+from torch.nn.init import xavier_normal_
 
 def mul(iterative):
     return reduce(operator.mul, iterative)
@@ -61,7 +62,7 @@ def predict(model, val_dataloader, criterion, device="cuda:0"):
           label = label.to(device)
           images = images.to(device)
           logit = model(images)
-          losses.append(criterion(logit, label) * len(images))
+          losses.append(float(criterion(logit, label)) * len(images))
           preds.append(logit.argmax(dim=1))
           labels.append(label)
     return losses, torch.cat(preds), torch.cat(labels)

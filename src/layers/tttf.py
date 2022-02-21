@@ -5,15 +5,15 @@ from torch import nn
 from typing import Tuple
 from torch.nn import init
 import math
+import numpy as np
 
 import tensornetwork as tn
 
 from torch.nn.parameter import Parameter
-from src.utils import mul, xavier_normal
 from torch.nn.init import _no_grad_normal_
 
 
-class TTRL(nn.Module):
+class TTTF(nn.Module):
     def __init__(
         self,
         input_shape: Tuple[Tuple[int, ...], ...],
@@ -30,7 +30,7 @@ class TTRL(nn.Module):
         assert len(output_shape) == len(output_rank)
 
         factory_kwargs = {"device": device, "dtype": dtype}
-        super(TTRL, self).__init__()
+        super(TTTF, self).__init__()
 
         self.input_shape = input_shape
         self.input_ranks = input_ranks
@@ -58,14 +58,13 @@ class TTRL(nn.Module):
         self.reset_parameters()
 
     def calculate_std(self) -> float:
-        fan_in = float(mul([mul(shape) for shape in self.input_shape]))
-        fan_out = float(mul(self.output_shape))
+        fan_in = float(np.prod([np.prod(shape) for shape in self.input_shape]))
+        fan_out = float(np.prod(self.output_shape))
 
-        tensor_variance = float(mul([mul(ranks) for ranks in self.input_ranks]))
-        tensor_variance *= float(mul(self.output_rank))
-        # TODO wrong formula
-        return (2 / (fan_in + fan_out) / tensor_variance) \
-            **(1/(sum([len(ranks) for ranks in self.input_ranks]) + len(self.output_rank) + 1))
+        rank_prod = float(np.prod([np.prod(ranks) for ranks in self.input_ranks]))
+        rank_prod *= float(np.prod(self.output_rank))
+        return (2 / (fan_in + fan_out) / rank_prod) \
+            **(0.5/(sum([len(ranks) for ranks in self.input_ranks]) + len(self.output_rank) + 1))
 
     def reset_parameters(self) -> None:
         std = self.calculate_std()
@@ -75,7 +74,7 @@ class TTRL(nn.Module):
         for j, _ in enumerate(self.output_factor):
             _no_grad_normal_(self.output_factor[j], 0, std)
         if self.bias is not None:
-            fan_in = mul([mul(shape) for shape in self.input_shape])
+            fan_in = np.prod([np.prod(shape) for shape in self.input_shape])
             bound = 1 / math.sqrt(fan_in) if fan_in > 0 else 0
             init.uniform_(self.bias, -bound, bound)
     
