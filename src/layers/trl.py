@@ -51,6 +51,7 @@ class TRL(nn.Module):
         fan_in = mul(self.input_shape)
         fan_out = self.output_features
         tensor_variance = mul(self.input_ranks) * self.output_rank
+        print(fan_in, fan_out, tensor_variance, len(self.input_shape) + 2)
         return (2 / (fan_in + fan_out) / tensor_variance) \
             ** (0.5 / (len(self.input_shape) + 2))
 

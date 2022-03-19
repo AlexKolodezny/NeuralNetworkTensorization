@@ -21,6 +21,7 @@ class TRLMasked(nn.Module):
         output_features: int,
         output_rank: Optional[int]=None,
         bias: bool = True,
+        gain: float = 1,
         device=None,
         dtype=None
     ) -> None:
@@ -33,6 +34,7 @@ class TRLMasked(nn.Module):
         self.input_ranks = input_ranks
         self.output_features = output_features
         self.output_rank = output_rank
+        self.gain = gain
         if bias:
             self.bias = Parameter(torch.empty(self.output_features, **factory_kwargs))
         else:
@@ -107,9 +109,9 @@ class TRLMasked(nn.Module):
         N = len(network)
         fan_in = np.prod(self.input_shape)
         fan_out = self.output_features
+        matrix_std = self.gain * (2 / (fan_in + fan_out))**0.5
         rank_prod = np.prod([edge.dimension for edge in list(tn.get_all_nondangling(network))])
-        return (2 / (fan_in + fan_out) / rank_prod) \
-            ** (0.5 / (N))
+        return (matrix_std**2 / rank_prod) ** (0.5 / (N))
 
     def reset_parameters(self) -> None:
         std = self.calculate_std()

@@ -1,4 +1,4 @@
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import torch
 import numpy as np
 from sklearn.metrics import accuracy_score
@@ -10,8 +10,9 @@ from torch import Tensor
 from typing import List
 import math
 from torch.nn.init import _no_grad_normal_
+from torchvision.datasets import CIFAR10
+from torchvision import transforms as T
 
-from torch.nn.init import xavier_normal_
 
 def mul(iterative):
     return reduce(operator.mul, iterative)
@@ -68,9 +69,9 @@ def predict(model, val_dataloader, criterion, device="cuda:0"):
     return losses, torch.cat(preds), torch.cat(labels)
 
 
-def train(model, train_dataloader, val_dataloader, criterion, optimizer, device="cuda:0", n_epochs=10, scheduler=None, plot=False):
+def train(model, train_dataloader, val_dataloader, criterion, optimizer, device="cuda:0", n_epochs=10, scheduler=None, plot=False, start_epoch=0, filename=None):
     accuracies = []
-    for epoch in range(n_epochs):
+    for epoch in range(start_epoch, n_epochs):
         train_losses, sizes = train_one_epoch(model, train_dataloader, criterion, optimizer, device)
         if plot:
             plt.plot(np.array(train_losses) / np.array(sizes))
@@ -82,4 +83,29 @@ def train(model, train_dataloader, val_dataloader, criterion, optimizer, device=
             scheduler.step()
         print("Epoch: {}, Train loss: {}, Validation loss: {}, Validation accuracy: {}"\
               .format(epoch, sum(train_losses) / len(train_dataloader.dataset), sum(val_losses) / len(val_dataloader.dataset), val_accuracy))
+        if filename is not None:
+            state = {
+                "model": model.state_dict(),
+                "epoch": epoch,
+            }
+            path = "./models/" + filename + ".pt"
+            torch.save(state, path)
     return accuracies
+
+
+def create_dataset():
+    train_transform = T.Compose([
+        T.RandomCrop((32, 32), padding=4),
+        T.RandomHorizontalFlip(0.5),
+        # T.ColorJitter(contrast=0.25),
+        T.ToTensor(),
+        T.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.243, 0.261)),
+    ])
+    val_transform = T.Compose([
+        T.ToTensor(),
+        T.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.243, 0.261)),
+    ])
+
+    train_dataset = CIFAR10("./data/", download=True, train=True, transform=train_transform)
+    val_dataset = CIFAR10("./data/", download=True, train=False, transform=val_transform)
+    return train_dataset, val_dataset
