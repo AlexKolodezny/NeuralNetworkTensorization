@@ -9,10 +9,11 @@ from src.utils import create_dataset, set_random_seed, train, predict
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--seed", help="random seed", default=12345, type=int)
-parser.add_argument("--depth", help="Wide ResNet Depth", default=16, type=int)
-parser.add_argument("--widening_factor", default=1, type=int)
-parser.add_argument("--n_epochs", help="number of epochs", default=200, type=int)
-parser.add_argument("--dropout", default=0.3, type=float)
+parser.add_argument("--tucker_channel_rank", help="Convolution Tucker rank", nargs="+", default=[1, 1], type=int)
+parser.add_argument("--tucker_space_rank", type=int, default=1)
+parser.add_argument("--tttf_space_rank", help="TTTF space rank", default=1, type=int)
+parser.add_argument("--tttf_channel_rank", default=[1, 1], nargs="+", type=int)
+parser.add_argument("--n_epochs", help="number of epochs", default=100, type=int)
 parser.add_argument("--resume", action='store_true')
 parser.add_argument("--filename", help="File to store checkpoints", type=str)
 parser.add_argument("--device", default="cuda:0", type=str)
@@ -26,24 +27,66 @@ train_dataloader = DataLoader(train_dataset, batch_size=128, shuffle=True)
 val_dataloader = DataLoader(val_dataset, batch_size=128)
 print("Dataloader has initialized")
 
-from src.networks.wide_resnet import Wide_ResNet
+from src.layers.tttf import TTTF
+from src.layers.tucker_conv import TuckerConv
+
+args.tucker_channel_rank = tuple(args.tucker_channel_rank)
+
+set_random_seed(args.seed)
+model = nn.Sequential(
+    nn.Sequential(
+        nn.Conv2d(3, 64, (3, 3), padding="same"),
+        nn.BatchNorm2d(64),
+        nn.ReLU(),
+    ),
+    nn.Sequential(
+        nn.Conv2d(64, 64, (3, 3), padding="same"),
+        nn.BatchNorm2d(64),
+        nn.ReLU(),
+    ),
+    nn.MaxPool2d((3, 3), stride=(2, 2), padding=(1, 1)),
+    nn.Sequential(
+        nn.Conv2d(64, 128, (3, 3), padding="same"),
+        nn.BatchNorm2d(128),
+        nn.ReLU(),
+    ),
+    nn.Sequential(
+        nn.Conv2d(128, 128, (3, 3), padding="same"),
+        nn.BatchNorm2d(128),
+        nn.ReLU(),
+    ),
+    nn.MaxPool2d((3, 3), stride=(2, 2), padding=(1, 1)),
+    nn.Sequential(
+        nn.Conv2d(128, 128, (3, 3), padding="same"),
+        nn.BatchNorm2d(128),
+        nn.ReLU(),
+    ),
+    nn.Sequential(
+        nn.Conv2d(128, 128, (3, 3), padding="same"),
+        nn.BatchNorm2d(128),
+        nn.ReLU(),
+    ),
+    nn.Sequential(
+        nn.Flatten(),
+        nn.Linear(8192, 10),
+    )
+)
+
+
 
 print("Initializing model")
 if args.resume:
-    model = Wide_ResNet(args.depth, args.widening_factor, args.dropout, 10)
     assert args.filename is not None, "Filename required for resume"
     path = "./models/" + args.filename + ".pt"
     checkpoint = torch.load(path)
     model.load_state_dict(checkpoint["model"])
     start_epoch = checkpoint["epoch"] + 1
 else:
-    set_random_seed(args.seed)
-    model = Wide_ResNet(args.depth, args.widening_factor, args.dropout, 10)
     start_epoch = 0
 
-optimizer = torch.optim.SGD(model.parameters(), lr=1e-1, momentum=0.9, weight_decay=5e-4, nesterov=True)
+optimizer = torch.optim.SGD(model.parameters(), lr=1e-2, momentum=0.9)
 criterion = nn.CrossEntropyLoss(reduction="mean")
-scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[60, 120, 160], gamma=0.2)
+scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 30, gamma=0.1, verbose=True)
 n_epochs = args.n_epochs
 
 device = args.device if torch.cuda.is_available() else torch.device("cpu")

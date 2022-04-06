@@ -1,0 +1,53 @@
+['ResNet-Greedy-TN-TRL-linked.py', '--seed', '7', '--device', 'cuda:3', '--full_train', '8', '--edge_train', '1', '--slice_gain', '0.000000001']
+Initializing dataloader
+Files already downloaded and verified
+Files already downloaded and verified
+Dataloader has initialized
+Initializing model
+Model initialized
+factor_0 (64, 1, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+core (1, 1, 1, 10)
+Testing model
+Tests passed
+Warm up model
+Adjusting learning rate of group 0 to 1.0000e-02.
+Adjusting learning rate of group 0 to 2.0000e-02.
+Epoch: 0, Train loss: 2.109729545288086, Validation loss: 1.8970161127090455, Validation accuracy: 0.204
+Adjusting learning rate of group 0 to 3.0000e-02.
+Epoch: 1, Train loss: 1.905448173980713, Validation loss: 1.874016079711914, Validation accuracy: 0.2358
+Adjusting learning rate of group 0 to 4.0000e-02.
+Epoch: 2, Train loss: 1.8686984659576416, Validation loss: 1.7886053983688355, Validation accuracy: 0.2601
+Adjusting learning rate of group 0 to 5.0000e-02.
+Epoch: 3, Train loss: 1.8178314443969728, Validation loss: 1.7716516040802002, Validation accuracy: 0.264
+Adjusting learning rate of group 0 to 6.0000e-02.
+Epoch: 4, Train loss: 1.7489885779571532, Validation loss: 1.667847924041748, Validation accuracy: 0.3301
+Adjusting learning rate of group 0 to 7.0000e-02.
+Epoch: 5, Train loss: 1.6765413759231567, Validation loss: 1.6040828979492188, Validation accuracy: 0.3683
+Adjusting learning rate of group 0 to 8.0000e-02.
+Epoch: 6, Train loss: 1.6258624446105958, Validation loss: 1.9682865737915038, Validation accuracy: 0.3266
+Adjusting learning rate of group 0 to 9.0000e-02.
+Epoch: 7, Train loss: 1.581456950454712, Validation loss: 1.5299589319229125, Validation accuracy: 0.3929
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 8, Train loss: 1.5566749560546875, Validation loss: 2.0963993713378906, Validation accuracy: 0.3311
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 9, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Stop warm up model
+Choosign ranks
+Train full model
+Before training full model training loss: nan
+factor_0 (64, 1, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+core (1, 1, 1, 10)
+Epoch: 0, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Epoch: 1, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Epoch: 2, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Epoch: 3, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Epoch: 4, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Epoch: 5, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Epoch: 6, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+Epoch: 7, Train loss: nan, Validation loss: nan, Validation accuracy: 0.1
+After training full model training loss: nan
+Gain: 1e-09

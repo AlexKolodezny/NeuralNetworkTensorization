@@ -2,7 +2,7 @@ from tqdm import tqdm
 import torch
 import numpy as np
 from sklearn.metrics import accuracy_score
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import random
 from functools import reduce
 import operator
@@ -73,9 +73,9 @@ def train(model, train_dataloader, val_dataloader, criterion, optimizer, device=
     accuracies = []
     for epoch in range(start_epoch, n_epochs):
         train_losses, sizes = train_one_epoch(model, train_dataloader, criterion, optimizer, device)
-        if plot:
-            plt.plot(np.array(train_losses) / np.array(sizes))
-            plt.show()
+        # if plot:
+        #     plt.plot(np.array(train_losses) / np.array(sizes))
+        #     plt.show()
         val_losses, val_pred, true_pred = predict(model, val_dataloader, criterion, device)
         val_accuracy = accuracy_score(true_pred.to("cpu"), val_pred.to("cpu"))
         accuracies.append(val_accuracy)
@@ -93,9 +93,9 @@ def train(model, train_dataloader, val_dataloader, criterion, optimizer, device=
     return accuracies
 
 
-def create_dataset():
+def create_dataset(reflect=False):
     train_transform = T.Compose([
-        T.RandomCrop((32, 32), padding=4),
+        T.RandomCrop((32, 32), padding=4, padding_mode="reflect" if reflect else "constant"),
         T.RandomHorizontalFlip(0.5),
         # T.ColorJitter(contrast=0.25),
         T.ToTensor(),
