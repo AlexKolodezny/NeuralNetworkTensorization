@@ -48,17 +48,22 @@ def increase_edge_in_layer(layer, edge, device, gain=1):
         return cloned_layer, cloned_edge
 
 
-def choose_and_increase_edge(original_model, layer_name, train_edge, gain, device):
-    layer = getattr(original_model, layer_name)
+def choose_and_increase_edge(original_model, layer_name, train_edge, gain, device, get_layer=None, set_layer=None):
+    if get_layer is None or set_layer is None:
+        get_layer = lambda model: getattr(model, layer_name)
+        set_layer = lambda model, new_layer: setattr(modle, layer_name, new_layer)
+    # layer = getattr(original_model, layer_name)
+    layer = get_layer(original_model)
     tensor_network = layer.construct_network()
     edges = list(tn.get_all_nondangling(tensor_network))
     edges_results = []
-    # old_layer = deepcopy(model.classifier)
     for edge in edges:
         model = deepcopy(original_model)
 
-        new_layer, cloned_edge = increase_edge_in_layer(getattr(model, layer_name), edge, device=device, gain=gain)
-        setattr(model, layer_name, new_layer)
+        # new_layer, cloned_edge = increase_edge_in_layer(getattr(model, layer_name), edge, device=device, gain=gain)
+        new_layer, cloned_edge = increase_edge_in_layer(get_layer(model), edge, device=device, gain=gain)
+        # setattr(model, layer_name, new_layer)
+        set_layer(model, new_layer)
 
         for param in model.parameters():
             param.requires_grad = False
@@ -67,28 +72,16 @@ def choose_and_increase_edge(original_model, layer_name, train_edge, gain, devic
 
         print("Train edge {}".format(edge.name))
         final_loss = train_edge(model)
-        getattr(model, layer_name).clear_masks()
-        # result_cores = {node.name: node for node in model.classifier.construct_network()}
-        # prev_cores = {node.name: node for node in copy_model.classifier.construct_network()}
-        # for name in result_cores.keys():
-        #     if edge.node1.name != name and edge.node2.name != name:
-        #         assert torch.allclose(result_cores[name].tensor, prev_cores[name].tensor)
-        #     else:
-        #         assert torch.allclose(result_cores[name].tensor[(0,) * len(result_cores[name].shape)], prev_cores[name].tensor[(0,) * len(prev_cores[name].shape)])
-        #         assert result_cores[name].shape != prev_cores[name].shape
-        edges_results.append((getattr(model, layer_name), final_loss, edge.node1.name, edge.node2.name))
+        # getattr(model, layer_name).clear_masks()
+        get_layer(model).clear_masks()
+        # edges_results.append((getattr(model, layer_name), final_loss, edge.node1.name, edge.node2.name))
+        edges_results.append((get_layer(model), final_loss, edge.node1.name, edge.node2.name))
     result_layer, _, edgenode1, edgenode2 = min(edges_results, key=lambda x: x[1])
-    setattr(original_model, layer_name, result_layer)
-    for core in model.classifier.construct_network():
+    # setattr(original_model, layer_name, result_layer)
+    set_layer(original_model, result_layer)
+
+    for core in get_layer(model).construct_network():
         print(core.name, core.shape)
-    # result_cores = {node.name: node for node in model.classifier.construct_network()}
-    # prev_cores = {node.name: node for node in copy_model.classifier.construct_network()}
-    # for name in result_cores.keys():
-    #     if edgenode1 != name and edgenode2 != name:
-    #         assert torch.allclose(result_cores[name].tensor, prev_cores[name].tensor)
-    #     else:
-    #         assert torch.allclose(result_cores[name].tensor[(0,) * len(result_cores[name].shape)], prev_cores[name].tensor[(0,) * len(prev_cores[name].shape)])
-    #         assert result_cores[name].shape != prev_cores[name].shape
     print("Choosen edge between {} and {}".format(edgenode1, edgenode2))
     for param in model.parameters():
         param.requires_grad = True

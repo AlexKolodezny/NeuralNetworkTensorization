@@ -1,0 +1,1925 @@
+['ResNet-Greedy-TN-TRL-tensorized.py', '--seed', '2', '--device', 'cuda:3', '--full_train', '8', '--edge_train', '1', '--slice_gain', '0.000000001']
+Initializing dataloader
+Files already downloaded and verified
+Files already downloaded and verified
+Dataloader has initialized
+Initializing model
+Model initialized
+factor_0 (8, 1, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 1, 1, 10)
+Testing model
+Tests passed
+Warm up model
+Adjusting learning rate of group 0 to 1.0000e-02.
+Adjusting learning rate of group 0 to 2.0000e-02.
+Epoch: 0, Train loss: 1.9626427694702149, Validation loss: 1.8641216283798219, Validation accuracy: 0.2114
+Adjusting learning rate of group 0 to 3.0000e-02.
+Epoch: 1, Train loss: 1.863123763961792, Validation loss: 1.8039486629486083, Validation accuracy: 0.2499
+Adjusting learning rate of group 0 to 4.0000e-02.
+Epoch: 2, Train loss: 1.7823423416900634, Validation loss: 2.093952615737915, Validation accuracy: 0.2716
+Adjusting learning rate of group 0 to 5.0000e-02.
+Epoch: 3, Train loss: 1.6992413845062255, Validation loss: 1.6994483560562135, Validation accuracy: 0.3254
+Adjusting learning rate of group 0 to 6.0000e-02.
+Epoch: 4, Train loss: 1.641942244567871, Validation loss: 1.6505813550949098, Validation accuracy: 0.3362
+Adjusting learning rate of group 0 to 7.0000e-02.
+Epoch: 5, Train loss: 1.5893275269699096, Validation loss: 1.8898585819244385, Validation accuracy: 0.3661
+Adjusting learning rate of group 0 to 8.0000e-02.
+Epoch: 6, Train loss: 1.567125656852722, Validation loss: 1.5312269802093506, Validation accuracy: 0.41
+Adjusting learning rate of group 0 to 9.0000e-02.
+Epoch: 7, Train loss: 1.5283866592407227, Validation loss: 2.6870971084594726, Validation accuracy: 0.3273
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 8, Train loss: 1.5179041283798218, Validation loss: 1.5963481439590455, Validation accuracy: 0.4219
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 9, Train loss: 1.5159296658325194, Validation loss: 1.513105043411255, Validation accuracy: 0.4191
+Stop warm up model
+Choosign ranks
+Train full model
+factor_0 (8, 1, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.4842129639434813, Validation loss: 2.3426771728515625, Validation accuracy: 0.3901
+Epoch: 1, Train loss: 1.4643227943038941, Validation loss: 1.4540104768753053, Validation accuracy: 0.4647
+Epoch: 2, Train loss: 1.4363875825881958, Validation loss: 4.380655728149414, Validation accuracy: 0.2487
+Epoch: 3, Train loss: 1.4153145534515381, Validation loss: 1.4467744874954223, Validation accuracy: 0.4603
+Epoch: 4, Train loss: 1.3619661136627197, Validation loss: 1.6334233081817626, Validation accuracy: 0.4656
+Epoch: 5, Train loss: 1.4152062549209594, Validation loss: 1.6173823291778564, Validation accuracy: 0.4629
+Epoch: 6, Train loss: 1.3420423746490477, Validation loss: 1.3880197219848633, Validation accuracy: 0.4689
+Epoch: 7, Train loss: 1.3036395757293702, Validation loss: 1.349833674621582, Validation accuracy: 0.5502
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.2397126038360595, Validation loss: 1.2540351461410522, Validation accuracy: 0.5721
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 2)
+core (1, 1, 1, 2, 10)
+Epoch: 0, Train loss: 1.2370504691314697, Validation loss: 1.2598452171325683, Validation accuracy: 0.5582
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.242554111328125, Validation loss: 1.2749458017349242, Validation accuracy: 0.5537
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 1, 1)
+factor_1 (8, 1, 2, 1)
+factor_2 (8, 2, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.2435168933868408, Validation loss: 1.273446164894104, Validation accuracy: 0.5546
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 2)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 2, 1, 10)
+Epoch: 0, Train loss: 1.240933666191101, Validation loss: 1.260442604827881, Validation accuracy: 0.5587
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 1, 1)
+factor_1 (8, 1, 1, 2)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 2, 1, 1, 10)
+Epoch: 0, Train loss: 1.2335974039459228, Validation loss: 1.2139686538696288, Validation accuracy: 0.5427
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 1, 2)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.2392570360565185, Validation loss: 1.2182595134735108, Validation accuracy: 0.5637
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 2, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.2432167491912842, Validation loss: 1.2718222515106201, Validation accuracy: 0.5532
+factor_0 (8, 2, 1, 1)
+factor_1 (8, 1, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 2, 1)
+core (1, 1, 1, 1, 10)
+Choosen edge between factor_0 and factor_1
+After step 0
+--core_ranks 1 1 1 1 --ring_ranks 2 1 1 1
+Train full model
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.2988329221343995, Validation loss: 1.3139882913589478, Validation accuracy: 0.5513
+Epoch: 1, Train loss: 1.308020898361206, Validation loss: 1.3033756908416747, Validation accuracy: 0.5356
+Epoch: 2, Train loss: 1.2954857663726806, Validation loss: 1.3190602594375611, Validation accuracy: 0.5378
+Epoch: 3, Train loss: 1.2507870906829834, Validation loss: 1.5436081014633178, Validation accuracy: 0.5414
+Epoch: 4, Train loss: 1.2616411636352538, Validation loss: 1.3271870595932007, Validation accuracy: 0.5644
+Epoch: 5, Train loss: 1.2571650975036621, Validation loss: 1.5488560926437378, Validation accuracy: 0.5678
+Epoch: 6, Train loss: 1.2148312026596069, Validation loss: 1.2978501646041871, Validation accuracy: 0.5318
+Epoch: 7, Train loss: 1.2375575522232056, Validation loss: 1.3725828889846803, Validation accuracy: 0.5355
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.1827348055648803, Validation loss: 1.2498595594406128, Validation accuracy: 0.569
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 2)
+core (1, 1, 1, 2, 10)
+Epoch: 0, Train loss: 1.2021173649978638, Validation loss: 1.2396136135101319, Validation accuracy: 0.5865
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.1863805295944214, Validation loss: 1.2501433095932006, Validation accuracy: 0.579
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 2)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 2, 1, 1, 10)
+Epoch: 0, Train loss: 1.1869508869171144, Validation loss: 1.215855234336853, Validation accuracy: 0.5762
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.1829911032104492, Validation loss: 1.2136112091064453, Validation accuracy: 0.5824
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 1)
+factor_1 (8, 3, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.1857241177368163, Validation loss: 1.263892188835144, Validation accuracy: 0.5741
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 1, 2)
+factor_3 (8, 1, 1, 1)
+core (1, 1, 2, 1, 10)
+Epoch: 0, Train loss: 1.1969492164230346, Validation loss: 1.2390369792938232, Validation accuracy: 0.5839
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 2, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.1877333196258546, Validation loss: 1.2545998449325562, Validation accuracy: 0.5793
+factor_0 (8, 2, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 1, 1)
+factor_3 (8, 1, 2, 1)
+core (1, 1, 1, 1, 10)
+Choosen edge between factor_2 and factor_3
+After step 1
+--core_ranks 1 1 1 1 --ring_ranks 2 1 2 1
+Train full model
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.210467511291504, Validation loss: 1.2981776845932007, Validation accuracy: 0.562
+Epoch: 1, Train loss: 1.256927409439087, Validation loss: 1.4213116792678833, Validation accuracy: 0.5026
+Epoch: 2, Train loss: 1.2219002607345582, Validation loss: 1.3115252767562866, Validation accuracy: 0.5883
+Epoch: 3, Train loss: 1.2014938580703736, Validation loss: 1.241184209728241, Validation accuracy: 0.5927
+Epoch: 4, Train loss: 1.1488518370819092, Validation loss: 1.5405693704605103, Validation accuracy: 0.5109
+Epoch: 5, Train loss: 1.1923985820770264, Validation loss: 1.4021609280586242, Validation accuracy: 0.5895
+Epoch: 6, Train loss: 1.173480339012146, Validation loss: 1.3174440470695497, Validation accuracy: 0.574
+Epoch: 7, Train loss: 1.189068045272827, Validation loss: 1.158739149570465, Validation accuracy: 0.6188
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.0930042304229737, Validation loss: 1.152561789703369, Validation accuracy: 0.6242
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.0962473165893554, Validation loss: 1.152325767326355, Validation accuracy: 0.6226
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 1)
+factor_1 (8, 3, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.0941499663925172, Validation loss: 1.1535490229606629, Validation accuracy: 0.6233
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 2)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (1, 2, 1, 1, 10)
+Epoch: 0, Train loss: 1.0976287636566162, Validation loss: 1.1504638458251952, Validation accuracy: 0.6223
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 2)
+core (1, 1, 1, 2, 10)
+Epoch: 0, Train loss: 1.0999236057662964, Validation loss: 1.1510825737953185, Validation accuracy: 0.6235
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 2, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.1000705774307251, Validation loss: 1.1510356281280518, Validation accuracy: 0.6227
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (1, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.0983095906829834, Validation loss: 1.1518914430618286, Validation accuracy: 0.6232
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 2)
+factor_3 (8, 2, 1, 1)
+core (1, 1, 2, 1, 10)
+Epoch: 0, Train loss: 1.0961160290527343, Validation loss: 1.1517326712608338, Validation accuracy: 0.6226
+factor_0 (8, 1, 2, 1)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 2)
+factor_3 (8, 2, 1, 1)
+core (1, 1, 2, 1, 10)
+Choosen edge between factor_0 and core
+After step 2
+--core_ranks 2 1 1 1 --ring_ranks 2 1 2 1
+Train full model
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 1.1307566339302062, Validation loss: 1.2065897352218629, Validation accuracy: 0.6484
+Epoch: 1, Train loss: 0.8777210498046875, Validation loss: 0.9440011498451233, Validation accuracy: 0.6828
+Epoch: 2, Train loss: 0.8074801942825317, Validation loss: 0.8620952201843262, Validation accuracy: 0.7343
+Epoch: 3, Train loss: 0.7573438770103454, Validation loss: 0.8945576086997986, Validation accuracy: 0.726
+Epoch: 4, Train loss: 0.7346212308120728, Validation loss: 0.8096688465118408, Validation accuracy: 0.7564
+Epoch: 5, Train loss: 0.7299778788757324, Validation loss: 0.855974079322815, Validation accuracy: 0.7431
+Epoch: 6, Train loss: 0.7034464230155945, Validation loss: 0.8032047283172608, Validation accuracy: 0.7519
+Epoch: 7, Train loss: 0.6638989695358276, Validation loss: 0.7640215578079224, Validation accuracy: 0.7734
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5980248738479614, Validation loss: 0.7177945281982422, Validation accuracy: 0.7879
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 2)
+factor_1 (8, 3, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5952624410629273, Validation loss: 0.718763707447052, Validation accuracy: 0.7932
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 2)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 2, 1, 10)
+Epoch: 0, Train loss: 0.5987487943267822, Validation loss: 0.7045680476188659, Validation accuracy: 0.7977
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.6042986315536499, Validation loss: 0.7138471140861511, Validation accuracy: 0.7883
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 2)
+core (2, 1, 1, 2, 10)
+Epoch: 0, Train loss: 0.5982631147384644, Validation loss: 0.7050768153190613, Validation accuracy: 0.7975
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 2)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 2, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5957928712081909, Validation loss: 0.7194004894256592, Validation accuracy: 0.7963
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 1, 2)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.6012258563232422, Validation loss: 0.714080920124054, Validation accuracy: 0.788
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5956490586471558, Validation loss: 0.7137253058433533, Validation accuracy: 0.7877
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 1, 1)
+factor_2 (8, 1, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 1, 1, 10)
+Choosen edge between factor_1 and factor_2
+After step 3
+--core_ranks 2 1 1 1 --ring_ranks 2 2 2 1
+Train full model
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.6279259493637085, Validation loss: 0.833097637462616, Validation accuracy: 0.7332
+Epoch: 1, Train loss: 0.6353530107498169, Validation loss: 0.9119161947250366, Validation accuracy: 0.762
+Epoch: 2, Train loss: 0.6258371940994263, Validation loss: 0.8801036039352417, Validation accuracy: 0.7947
+Epoch: 3, Train loss: 0.5996203432846069, Validation loss: 0.7719564591407776, Validation accuracy: 0.798
+Epoch: 4, Train loss: 0.5749516310501098, Validation loss: 0.7495322610855103, Validation accuracy: 0.8071
+Epoch: 5, Train loss: 0.5633586098861695, Validation loss: 0.7296630017280579, Validation accuracy: 0.7841
+Epoch: 6, Train loss: 0.5531738739109039, Validation loss: 0.7279504849433899, Validation accuracy: 0.8023
+Epoch: 7, Train loss: 0.554262829914093, Validation loss: 0.7764081789970398, Validation accuracy: 0.8075
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.4962004981994629, Validation loss: 0.6837032172203064, Validation accuracy: 0.8248
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5028765432739258, Validation loss: 0.6875876824378967, Validation accuracy: 0.8212
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 1, 2)
+core (2, 1, 1, 2, 10)
+Epoch: 0, Train loss: 0.5033592481422424, Validation loss: 0.671989404296875, Validation accuracy: 0.824
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 2)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 2, 1, 10)
+Epoch: 0, Train loss: 0.5017976175689697, Validation loss: 0.6694400057792663, Validation accuracy: 0.8238
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 2, 2)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.5035475424957275, Validation loss: 0.6717651112556458, Validation accuracy: 0.8244
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.49816462714195253, Validation loss: 0.690733590888977, Validation accuracy: 0.8213
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 2)
+factor_1 (8, 3, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5035070293617249, Validation loss: 0.6755672642707825, Validation accuracy: 0.825
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 2)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 2, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5026127552032471, Validation loss: 0.6880918577194214, Validation accuracy: 0.8219
+factor_0 (8, 2, 2, 2)
+factor_1 (8, 2, 2, 1)
+factor_2 (8, 2, 2, 1)
+factor_3 (8, 2, 2, 1)
+core (2, 1, 1, 1, 10)
+Choosen edge between factor_1 and factor_2
+After step 4
+--core_ranks 2 1 1 1 --ring_ranks 2 3 2 1
+Train full model
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.5657801222229004, Validation loss: 0.8688108112335206, Validation accuracy: 0.8146
+Epoch: 1, Train loss: 0.5301116954040528, Validation loss: 0.8119943466663361, Validation accuracy: 0.8138
+Epoch: 2, Train loss: 0.5249473900985718, Validation loss: 0.7625790546417236, Validation accuracy: 0.8117
+Epoch: 3, Train loss: 0.5132896643352508, Validation loss: 0.6708813566207886, Validation accuracy: 0.8157
+Epoch: 4, Train loss: 0.49613023419380187, Validation loss: 0.7147113731384277, Validation accuracy: 0.8124
+Epoch: 5, Train loss: 0.5084097485733032, Validation loss: 0.6839046281814575, Validation accuracy: 0.8156
+Epoch: 6, Train loss: 0.4976076679611206, Validation loss: 0.7164034502506256, Validation accuracy: 0.8126
+Epoch: 7, Train loss: 0.4731191654586792, Validation loss: 0.8530215072631836, Validation accuracy: 0.8286
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.44886352140426633, Validation loss: 0.7615699870109558, Validation accuracy: 0.8393
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 2)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 2, 1, 10)
+Epoch: 0, Train loss: 0.4501214568901062, Validation loss: 0.7499815340042114, Validation accuracy: 0.8391
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 2)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 2, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.4561736634349823, Validation loss: 0.6719971068382263, Validation accuracy: 0.8396
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 2)
+core (2, 1, 1, 2, 10)
+Epoch: 0, Train loss: 0.4561438118839264, Validation loss: 0.7485352646827698, Validation accuracy: 0.8396
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 2)
+factor_1 (8, 3, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.4507931576538086, Validation loss: 0.6605543203353882, Validation accuracy: 0.8375
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.45419593614578246, Validation loss: 0.7634322754859925, Validation accuracy: 0.8394
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.4485155112552643, Validation loss: 0.6665779486656189, Validation accuracy: 0.8373
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 4, 1)
+factor_2 (8, 4, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.44148985868453977, Validation loss: 0.6418299361228943, Validation accuracy: 0.8388
+factor_0 (8, 1, 2, 2)
+factor_1 (8, 2, 4, 1)
+factor_2 (8, 4, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (2, 1, 1, 1, 10)
+Choosen edge between factor_0 and core
+After step 5
+--core_ranks 3 1 1 1 --ring_ranks 2 3 2 1
+Train full model
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.4719795901679993, Validation loss: 0.6920255906105042, Validation accuracy: 0.8392
+Epoch: 1, Train loss: 0.480699943857193, Validation loss: 0.7281207022666931, Validation accuracy: 0.7941
+Epoch: 2, Train loss: 0.4656623783493042, Validation loss: 0.7127322968482971, Validation accuracy: 0.827
+Epoch: 3, Train loss: 0.431349519405365, Validation loss: 0.665956367969513, Validation accuracy: 0.8475
+Epoch: 4, Train loss: 0.41890964809417724, Validation loss: 0.6239064534187317, Validation accuracy: 0.8483
+Epoch: 5, Train loss: 0.378766847782135, Validation loss: 0.5839384476661682, Validation accuracy: 0.8436
+Epoch: 6, Train loss: 0.35673526700019836, Validation loss: 0.5590981514453888, Validation accuracy: 0.8449
+Epoch: 7, Train loss: 0.34879384039878847, Validation loss: 0.5740631035804749, Validation accuracy: 0.8578
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.3163679636955261, Validation loss: 0.5716011572837829, Validation accuracy: 0.8574
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (4, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.3207032766532898, Validation loss: 0.5694321570396423, Validation accuracy: 0.857
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 2, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.3223489237689972, Validation loss: 0.5713600611686707, Validation accuracy: 0.8577
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 3)
+factor_1 (8, 3, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.32706194402694705, Validation loss: 0.5682366400718689, Validation accuracy: 0.858
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 2)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 2, 1, 10)
+Epoch: 0, Train loss: 0.32008716381073, Validation loss: 0.5680431686401367, Validation accuracy: 0.8584
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 1)
+factor_2 (8, 4, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.3207286593723297, Validation loss: 0.5680979268074036, Validation accuracy: 0.8578
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.3188624529838562, Validation loss: 0.5693002395629883, Validation accuracy: 0.8582
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 2)
+core (3, 1, 1, 2, 10)
+Epoch: 0, Train loss: 0.32124366314888003, Validation loss: 0.570922606086731, Validation accuracy: 0.857
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 2, 1)
+factor_3 (8, 2, 1, 2)
+core (3, 1, 1, 2, 10)
+Choosen edge between factor_2 and factor_3
+After step 6
+--core_ranks 3 1 1 1 --ring_ranks 2 3 3 1
+Train full model
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.3323949776172638, Validation loss: 0.5775186499595643, Validation accuracy: 0.8597
+Epoch: 1, Train loss: 0.31792056209564207, Validation loss: 0.6002948764801025, Validation accuracy: 0.8529
+Epoch: 2, Train loss: 0.3130170138835907, Validation loss: 0.5115438492774963, Validation accuracy: 0.8542
+Epoch: 3, Train loss: 0.3087473672389984, Validation loss: 0.48498109092712405, Validation accuracy: 0.8569
+Epoch: 4, Train loss: 0.3011685786342621, Validation loss: 0.5115162842750549, Validation accuracy: 0.8631
+Epoch: 5, Train loss: 0.2952493213367462, Validation loss: 0.5226650104522705, Validation accuracy: 0.8556
+Epoch: 6, Train loss: 0.2832903891181946, Validation loss: 0.4921637026786804, Validation accuracy: 0.8582
+Epoch: 7, Train loss: 0.2871397777557373, Validation loss: 0.5012711149692536, Validation accuracy: 0.8677
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.26059757283210755, Validation loss: 0.5005314981460571, Validation accuracy: 0.8691
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 2, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.2598496859931946, Validation loss: 0.5027610356330872, Validation accuracy: 0.8683
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 1)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.2584099905872345, Validation loss: 0.5029914700984954, Validation accuracy: 0.8686
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.26387284715652465, Validation loss: 0.5012151923179626, Validation accuracy: 0.8692
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 2)
+core (3, 1, 1, 2, 10)
+Epoch: 0, Train loss: 0.2559589900779724, Validation loss: 0.49421861629486086, Validation accuracy: 0.8707
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 3)
+factor_1 (8, 3, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.2603589453125, Validation loss: 0.501645158815384, Validation accuracy: 0.869
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 2)
+factor_3 (8, 3, 1, 1)
+core (3, 1, 2, 1, 10)
+Epoch: 0, Train loss: 0.25926268658638, Validation loss: 0.5013855741500854, Validation accuracy: 0.8687
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (4, 1, 1, 1, 10)
+Epoch: 0, Train loss: 0.2628758095359802, Validation loss: 0.5031055187702179, Validation accuracy: 0.8689
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 3, 1)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (4, 1, 1, 1, 10)
+Choosen edge between factor_1 and core
+After step 7
+--core_ranks 3 2 1 1 --ring_ranks 2 3 3 1
+Train full model
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.276232995724678, Validation loss: 0.6104238065719605, Validation accuracy: 0.8626
+Epoch: 1, Train loss: 0.311939941072464, Validation loss: 0.5354553804397583, Validation accuracy: 0.8593
+Epoch: 2, Train loss: 0.2663841728448868, Validation loss: 0.49897569236755374, Validation accuracy: 0.8662
+Epoch: 3, Train loss: 0.24826119682312012, Validation loss: 0.5741617433547974, Validation accuracy: 0.8557
+Epoch: 4, Train loss: 0.2400147221326828, Validation loss: 0.6053101143836975, Validation accuracy: 0.8692
+Epoch: 5, Train loss: 0.23149969099998474, Validation loss: 0.49190103635787963, Validation accuracy: 0.8725
+Epoch: 6, Train loss: 0.22711244879722595, Validation loss: 0.6076612850189209, Validation accuracy: 0.8657
+Epoch: 7, Train loss: 0.2219188724374771, Validation loss: 0.5450366975784302, Validation accuracy: 0.8771
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.1952851854801178, Validation loss: 0.5285063442230225, Validation accuracy: 0.8788
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.19676845567703247, Validation loss: 0.5247275972366333, Validation accuracy: 0.8793
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 3, 2)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.19547309108734132, Validation loss: 0.5265687215805054, Validation accuracy: 0.879
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 2)
+core (3, 2, 1, 2, 10)
+Epoch: 0, Train loss: 0.1937310567188263, Validation loss: 0.5262653549194336, Validation accuracy: 0.8792
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 3)
+factor_1 (8, 3, 3, 2)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.19699495316505433, Validation loss: 0.5271997060775757, Validation accuracy: 0.8782
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 3)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 2, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.1927484029817581, Validation loss: 0.5271459169387818, Validation accuracy: 0.8791
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 3, 2)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (4, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.19457375541210176, Validation loss: 0.5275746276855469, Validation accuracy: 0.8791
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 3)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 3, 1, 1, 10)
+Epoch: 0, Train loss: 0.19484877724647523, Validation loss: 0.5269505422592163, Validation accuracy: 0.8797
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 3, 3)
+factor_2 (8, 3, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 3, 1, 1, 10)
+Choosen edge between factor_1 and factor_2
+After step 8
+--core_ranks 3 2 1 1 --ring_ranks 2 4 3 1
+Train full model
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.2170430305671692, Validation loss: 0.4763916530609131, Validation accuracy: 0.8613
+Epoch: 1, Train loss: 0.212865178604126, Validation loss: 0.5077544466018676, Validation accuracy: 0.8693
+Epoch: 2, Train loss: 0.2176749697494507, Validation loss: 0.47545285844802854, Validation accuracy: 0.8684
+Epoch: 3, Train loss: 0.20549954173088072, Validation loss: 0.5564756175994873, Validation accuracy: 0.8778
+Epoch: 4, Train loss: 0.20288422424316407, Validation loss: 0.5180698476791382, Validation accuracy: 0.8776
+Epoch: 5, Train loss: 0.19586491157531738, Validation loss: 0.4338114493370056, Validation accuracy: 0.8801
+Epoch: 6, Train loss: 0.19207166522026062, Validation loss: 0.44410603456497194, Validation accuracy: 0.8835
+Epoch: 7, Train loss: 0.18246119703292846, Validation loss: 0.4658254006385803, Validation accuracy: 0.8781
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.1722484540462494, Validation loss: 0.4503380005836487, Validation accuracy: 0.8786
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 1, 2)
+core (3, 2, 1, 2, 10)
+Epoch: 0, Train loss: 0.17405241466522217, Validation loss: 0.45133959693908693, Validation accuracy: 0.8787
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (4, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.17278348162174226, Validation loss: 0.450082377910614, Validation accuracy: 0.879
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 2, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.17355701009750366, Validation loss: 0.4515076436042786, Validation accuracy: 0.8785
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 3, 1, 1, 10)
+Epoch: 0, Train loss: 0.1728435068798065, Validation loss: 0.4500440203666687, Validation accuracy: 0.8791
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 3)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.1686231000471115, Validation loss: 0.4512998426437378, Validation accuracy: 0.8784
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 3, 1)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.17103767443656923, Validation loss: 0.4512085768699646, Validation accuracy: 0.8797
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 3, 2)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.17288275742530823, Validation loss: 0.45092847871780395, Validation accuracy: 0.8789
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 3, 2)
+factor_3 (8, 3, 1, 1)
+core (3, 2, 2, 1, 10)
+Choosen edge between factor_2 and factor_3
+After step 9
+--core_ranks 3 2 1 1 --ring_ranks 2 4 4 1
+Train full model
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.18684538069725037, Validation loss: 0.5636960422515869, Validation accuracy: 0.8837
+Epoch: 1, Train loss: 0.1840528910446167, Validation loss: 0.4417264468193054, Validation accuracy: 0.8834
+Epoch: 2, Train loss: 0.17784098269224166, Validation loss: 0.5172407424926758, Validation accuracy: 0.8841
+Epoch: 3, Train loss: 0.17865363676071166, Validation loss: 0.5012773491859436, Validation accuracy: 0.8784
+Epoch: 4, Train loss: 0.17487672357559203, Validation loss: 0.4321465942382812, Validation accuracy: 0.883
+Epoch: 5, Train loss: 0.16488894832611084, Validation loss: 0.47261897497177124, Validation accuracy: 0.883
+Epoch: 6, Train loss: 0.16416037052154542, Validation loss: 0.4746169748306274, Validation accuracy: 0.8795
+Epoch: 7, Train loss: 0.16179848649978637, Validation loss: 0.5211296627998352, Validation accuracy: 0.8807
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.14453400085926055, Validation loss: 0.502544142818451, Validation accuracy: 0.8839
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 2, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.14288212712287904, Validation loss: 0.502876702594757, Validation accuracy: 0.8838
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 1, 2)
+core (3, 2, 1, 2, 10)
+Epoch: 0, Train loss: 0.1457562052345276, Validation loss: 0.5052109919548035, Validation accuracy: 0.8832
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (3, 3, 1, 1, 10)
+Epoch: 0, Train loss: 0.14445982667922974, Validation loss: 0.5025085187911987, Validation accuracy: 0.8833
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 3)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.14619317737579346, Validation loss: 0.5038082807540893, Validation accuracy: 0.8835
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.1424804515838623, Validation loss: 0.5025053173065186, Validation accuracy: 0.8835
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 1)
+factor_3 (8, 5, 1, 1)
+core (3, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.14501646279335023, Validation loss: 0.5066070449829102, Validation accuracy: 0.8836
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 1, 1, 10)
+Epoch: 0, Train loss: 0.14220680514335632, Validation loss: 0.502106842136383, Validation accuracy: 0.8837
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 1)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 1, 1, 10)
+Choosen edge between factor_2 and core
+After step 10
+--core_ranks 3 2 2 1 --ring_ranks 2 4 4 1
+Train full model
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.1655025036239624, Validation loss: 0.49106792039871217, Validation accuracy: 0.8787
+Epoch: 1, Train loss: 0.15571680735111237, Validation loss: 0.5240703611373901, Validation accuracy: 0.8776
+Epoch: 2, Train loss: 0.1536045113658905, Validation loss: 0.49576121730804446, Validation accuracy: 0.8846
+Epoch: 3, Train loss: 0.1491692249584198, Validation loss: 0.44929626569747927, Validation accuracy: 0.8831
+Epoch: 4, Train loss: 0.1489476682949066, Validation loss: 0.426508499956131, Validation accuracy: 0.8854
+Epoch: 5, Train loss: 0.14313654678344725, Validation loss: 0.45086889686584475, Validation accuracy: 0.8863
+Epoch: 6, Train loss: 0.13948003277778626, Validation loss: 0.5682927867889405, Validation accuracy: 0.8807
+Epoch: 7, Train loss: 0.14379062808036805, Validation loss: 0.48120700149536133, Validation accuracy: 0.8852
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11828932278871536, Validation loss: 0.47297380142211914, Validation accuracy: 0.8858
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11831182566642762, Validation loss: 0.4718282922744751, Validation accuracy: 0.8851
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 3)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.1196904946732521, Validation loss: 0.4731319009780884, Validation accuracy: 0.8857
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (3, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.11701490004301071, Validation loss: 0.4750843881607056, Validation accuracy: 0.8862
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 2, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11974395333766938, Validation loss: 0.4708217102050781, Validation accuracy: 0.8858
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (3, 3, 2, 1, 10)
+Epoch: 0, Train loss: 0.1185681840968132, Validation loss: 0.47315678539276124, Validation accuracy: 0.8855
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 2)
+factor_3 (8, 5, 1, 1)
+core (3, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.1186011472940445, Validation loss: 0.47207798614501956, Validation accuracy: 0.8864
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 2)
+core (3, 2, 2, 2, 10)
+Epoch: 0, Train loss: 0.12105131465911866, Validation loss: 0.4730684371948242, Validation accuracy: 0.8862
+factor_0 (8, 1, 2, 3)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 2)
+core (3, 2, 2, 2, 10)
+Choosen edge between factor_0 and core
+After step 11
+--core_ranks 4 2 2 1 --ring_ranks 2 4 4 1
+Train full model
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.13302302988529205, Validation loss: 0.5278247777938843, Validation accuracy: 0.8823
+Epoch: 1, Train loss: 0.14454144947528838, Validation loss: 0.5489655400276184, Validation accuracy: 0.8854
+Epoch: 2, Train loss: 0.13494895262360573, Validation loss: 0.4538377376556397, Validation accuracy: 0.8797
+Epoch: 3, Train loss: 0.12985485880732536, Validation loss: 0.5875397041320801, Validation accuracy: 0.8844
+Epoch: 4, Train loss: 0.13573376959562303, Validation loss: 0.5582558324813843, Validation accuracy: 0.8858
+Epoch: 5, Train loss: 0.13165348466396332, Validation loss: 0.5954041349411011, Validation accuracy: 0.8859
+Epoch: 6, Train loss: 0.131467828438282, Validation loss: 0.5921600828170777, Validation accuracy: 0.8861
+Epoch: 7, Train loss: 0.12173981499671936, Validation loss: 0.5307725687026977, Validation accuracy: 0.8838
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.11725768767595292, Validation loss: 0.5103697395324707, Validation accuracy: 0.8873
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 2)
+core (4, 2, 2, 2, 10)
+Epoch: 0, Train loss: 0.11760605361461639, Validation loss: 0.5101472995758056, Validation accuracy: 0.8873
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (4, 3, 2, 1, 10)
+Epoch: 0, Train loss: 0.11610611873149872, Validation loss: 0.5118320302963257, Validation accuracy: 0.8871
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (5, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11862896100521088, Validation loss: 0.5112515504837036, Validation accuracy: 0.8876
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 4)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11870591431140899, Validation loss: 0.5109005697250366, Validation accuracy: 0.8869
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 2)
+factor_3 (8, 5, 1, 1)
+core (4, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11834010686159134, Validation loss: 0.5106646892547607, Validation accuracy: 0.8875
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 4, 2)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11805794741153718, Validation loss: 0.510356495475769, Validation accuracy: 0.8872
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 2, 1)
+core (4, 2, 2, 1, 10)
+Epoch: 0, Train loss: 0.11745978633880615, Validation loss: 0.5114083826065063, Validation accuracy: 0.8871
+factor_0 (8, 2, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 2)
+factor_3 (8, 4, 2, 1)
+core (4, 2, 2, 1, 10)
+Choosen edge between factor_2 and core
+After step 12
+--core_ranks 4 2 3 1 --ring_ranks 2 4 4 1
+Train full model
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.12210032104969025, Validation loss: 0.46751309795379636, Validation accuracy: 0.8796
+Epoch: 1, Train loss: 0.12419112626552582, Validation loss: 0.4989582281112671, Validation accuracy: 0.8826
+Epoch: 2, Train loss: 0.12139974908828735, Validation loss: 0.529587919807434, Validation accuracy: 0.8898
+Epoch: 3, Train loss: 0.11949558096647263, Validation loss: 0.5279600757598877, Validation accuracy: 0.8896
+Epoch: 4, Train loss: 0.1218334221458435, Validation loss: 0.5502020539283753, Validation accuracy: 0.8883
+Epoch: 5, Train loss: 0.11496530896186828, Validation loss: 0.5614852548599243, Validation accuracy: 0.886
+Epoch: 6, Train loss: 0.11554116222381591, Validation loss: 0.5979013082504272, Validation accuracy: 0.8878
+Epoch: 7, Train loss: 0.10816692724466324, Validation loss: 0.5448931098937988, Validation accuracy: 0.8863
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (5, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.10459755557537079, Validation loss: 0.5139197545051575, Validation accuracy: 0.8877
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 2, 1)
+core (4, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.10432457820892334, Validation loss: 0.511022822856903, Validation accuracy: 0.888
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.10786103548288345, Validation loss: 0.5148065942764283, Validation accuracy: 0.8876
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 4)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 4, 1, 10)
+Epoch: 0, Train loss: 0.10522604821443558, Validation loss: 0.5154591553688049, Validation accuracy: 0.8875
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (4, 3, 3, 1, 10)
+Epoch: 0, Train loss: 0.10609596774220467, Validation loss: 0.5159332319259644, Validation accuracy: 0.8878
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 1)
+core (4, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.10635200268268585, Validation loss: 0.5158666446685791, Validation accuracy: 0.8879
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 4)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (4, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.1035971767449379, Validation loss: 0.514920691871643, Validation accuracy: 0.8876
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (4, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.10426149014472962, Validation loss: 0.5151299649238587, Validation accuracy: 0.8874
+factor_0 (8, 1, 2, 4)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (4, 2, 3, 2, 10)
+Choosen edge between factor_0 and core
+After step 13
+--core_ranks 5 2 3 1 --ring_ranks 2 4 4 1
+Train full model
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (5, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.10805389977455139, Validation loss: 0.5409056573867798, Validation accuracy: 0.8839
+Epoch: 1, Train loss: 0.11229344203948975, Validation loss: 0.5435941425323486, Validation accuracy: 0.8885
+Epoch: 2, Train loss: 0.11087125468969346, Validation loss: 0.5785587669372558, Validation accuracy: 0.8829
+Epoch: 3, Train loss: 0.10811683067321777, Validation loss: 0.545840075302124, Validation accuracy: 0.8889
+Epoch: 4, Train loss: 0.11122729736447334, Validation loss: 0.6325412915229798, Validation accuracy: 0.8862
+Epoch: 5, Train loss: 0.10748800614118575, Validation loss: 0.5621478590011597, Validation accuracy: 0.8876
+Epoch: 6, Train loss: 0.1068903208565712, Validation loss: 0.4905299806594849, Validation accuracy: 0.8883
+Epoch: 7, Train loss: 0.10180014933228493, Validation loss: 0.5175807563781738, Validation accuracy: 0.8835
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.09570763461112976, Validation loss: 0.4995187581062317, Validation accuracy: 0.8871
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (5, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.09860170144081115, Validation loss: 0.49664273300170897, Validation accuracy: 0.8869
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 2, 1)
+core (5, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.09449940154790878, Validation loss: 0.49585836639404296, Validation accuracy: 0.8879
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 1)
+core (5, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.09507343185901641, Validation loss: 0.6287591529846192, Validation accuracy: 0.8924
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (6, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.09654663878917694, Validation loss: 0.4984808614730835, Validation accuracy: 0.8869
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (5, 3, 3, 1, 10)
+Epoch: 0, Train loss: 0.09687099431037903, Validation loss: 0.4969600107192993, Validation accuracy: 0.8869
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 5)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 1)
+core (5, 2, 3, 1, 10)
+Epoch: 0, Train loss: 0.0996746673297882, Validation loss: 0.49886717548370363, Validation accuracy: 0.8876
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 4)
+factor_3 (8, 4, 1, 1)
+core (5, 2, 4, 1, 10)
+Epoch: 0, Train loss: 0.09595410529375076, Validation loss: 0.49853474159240724, Validation accuracy: 0.8873
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 4)
+factor_3 (8, 4, 1, 1)
+core (5, 2, 4, 1, 10)
+Choosen edge between factor_3 and core
+After step 14
+--core_ranks 5 2 3 2 --ring_ranks 2 4 4 1
+Train full model
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.0961564131462574, Validation loss: 0.5972369888305664, Validation accuracy: 0.8899
+Epoch: 1, Train loss: 0.09502190604448318, Validation loss: 0.5621011989593506, Validation accuracy: 0.883
+Epoch: 2, Train loss: 0.09102130006790161, Validation loss: 0.5675310322761535, Validation accuracy: 0.8867
+Epoch: 3, Train loss: 0.09909353339195251, Validation loss: 0.4728994426727295, Validation accuracy: 0.8897
+Epoch: 4, Train loss: 0.10143659870505332, Validation loss: 0.5231739730834961, Validation accuracy: 0.8898
+Epoch: 5, Train loss: 0.09393113446235657, Validation loss: 0.5075778936386108, Validation accuracy: 0.8893
+Epoch: 6, Train loss: 0.09248249135017395, Validation loss: 0.5189858325004577, Validation accuracy: 0.8843
+Epoch: 7, Train loss: 0.09274991245985031, Validation loss: 0.48200771598815917, Validation accuracy: 0.8833
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.08605072667598725, Validation loss: 0.4678877429962158, Validation accuracy: 0.8866
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.0871199425983429, Validation loss: 0.4644406101226807, Validation accuracy: 0.8855
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 4)
+factor_3 (8, 4, 1, 2)
+core (5, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.08805275089502335, Validation loss: 0.46589005508422854, Validation accuracy: 0.8847
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 5)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.08725904798746109, Validation loss: 0.46495993194580076, Validation accuracy: 0.8852
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (5, 3, 3, 2, 10)
+Epoch: 0, Train loss: 0.0862272294998169, Validation loss: 0.4644954713821411, Validation accuracy: 0.8855
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 3)
+core (5, 2, 3, 3, 10)
+Epoch: 0, Train loss: 0.0858736389350891, Validation loss: 0.4671854902267456, Validation accuracy: 0.8853
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 1, 2)
+core (6, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.08497374787330628, Validation loss: 0.4647933330535889, Validation accuracy: 0.8856
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 2, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.0876969402718544, Validation loss: 0.4634678575515747, Validation accuracy: 0.8851
+factor_0 (8, 2, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 4, 3)
+factor_3 (8, 4, 2, 2)
+core (5, 2, 3, 2, 10)
+Choosen edge between factor_2 and factor_3
+After step 15
+--core_ranks 5 2 3 2 --ring_ranks 2 4 5 1
+Train full model
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.08911308912038803, Validation loss: 0.47189056701660154, Validation accuracy: 0.8881
+Epoch: 1, Train loss: 0.08716443384885789, Validation loss: 0.506423191833496, Validation accuracy: 0.8876
+Epoch: 2, Train loss: 0.08381300431728363, Validation loss: 0.5585439842224121, Validation accuracy: 0.8925
+Epoch: 3, Train loss: 0.08203781919002533, Validation loss: 0.5206193336486816, Validation accuracy: 0.8882
+Epoch: 4, Train loss: 0.08362440595626831, Validation loss: 0.6066057788848876, Validation accuracy: 0.8906
+Epoch: 5, Train loss: 0.08300716861248017, Validation loss: 0.6208422416687012, Validation accuracy: 0.8843
+Epoch: 6, Train loss: 0.08518342239141465, Validation loss: 0.5506787598609925, Validation accuracy: 0.8869
+Epoch: 7, Train loss: 0.08844602658510207, Validation loss: 0.5508331398963928, Validation accuracy: 0.8868
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07393385426163673, Validation loss: 0.5308856950759888, Validation accuracy: 0.8899
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 2)
+core (6, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.07200011541128158, Validation loss: 0.5326863142967224, Validation accuracy: 0.8902
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 2)
+core (5, 3, 3, 2, 10)
+Epoch: 0, Train loss: 0.07142904810905457, Validation loss: 0.532501721572876, Validation accuracy: 0.8906
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 5, 3)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.0762370431447029, Validation loss: 0.5324919451713562, Validation accuracy: 0.8902
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 5)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.07376746115922928, Validation loss: 0.5321858882904053, Validation accuracy: 0.8905
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 1, 3)
+core (5, 2, 3, 3, 10)
+Epoch: 0, Train loss: 0.07379003897190094, Validation loss: 0.5324868176460266, Validation accuracy: 0.8905
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 6, 3)
+factor_3 (8, 6, 1, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.07693088557481766, Validation loss: 0.5353900213241577, Validation accuracy: 0.8905
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 2, 2)
+core (5, 2, 3, 2, 10)
+Epoch: 0, Train loss: 0.07268662499904632, Validation loss: 0.5333941184997558, Validation accuracy: 0.8899
+factor_0 (8, 2, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 3)
+factor_3 (8, 5, 2, 2)
+core (5, 2, 3, 2, 10)
+Choosen edge between factor_2 and core
+After step 16
+--core_ranks 5 2 4 2 --ring_ranks 2 4 5 1
+Train full model
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07640721350669862, Validation loss: 0.5521888366699219, Validation accuracy: 0.8855
+Epoch: 1, Train loss: 0.07788413198709487, Validation loss: 0.49129670448303225, Validation accuracy: 0.8901
+Epoch: 2, Train loss: 0.0813250573503971, Validation loss: 0.6329953924179077, Validation accuracy: 0.8911
+Epoch: 3, Train loss: 0.07893289887666702, Validation loss: 0.5514016017913819, Validation accuracy: 0.8848
+Epoch: 4, Train loss: 0.07554675649881364, Validation loss: 0.5815022085189819, Validation accuracy: 0.8921
+Epoch: 5, Train loss: 0.07656791367650032, Validation loss: 0.7308863620758057, Validation accuracy: 0.8877
+Epoch: 6, Train loss: 0.07592617617607117, Validation loss: 0.5752747375488281, Validation accuracy: 0.8905
+Epoch: 7, Train loss: 0.07543087615013122, Validation loss: 0.6211026821136475, Validation accuracy: 0.8864
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (6, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07334086697220803, Validation loss: 0.6059018619537353, Validation accuracy: 0.889
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 2, 2)
+core (5, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07309588090896607, Validation loss: 0.6074651453018188, Validation accuracy: 0.89
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (5, 3, 4, 2, 10)
+Epoch: 0, Train loss: 0.07265337069272995, Validation loss: 0.6070296533584595, Validation accuracy: 0.8898
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 5)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07460515202224255, Validation loss: 0.6089271070480347, Validation accuracy: 0.8897
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 5)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 5, 2, 10)
+Epoch: 0, Train loss: 0.0731023193526268, Validation loss: 0.6050794328689575, Validation accuracy: 0.8894
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (5, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07213425487756729, Validation loss: 0.6071125080108642, Validation accuracy: 0.8897
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 3)
+core (5, 2, 4, 3, 10)
+Epoch: 0, Train loss: 0.0738569419336319, Validation loss: 0.605971044921875, Validation accuracy: 0.8904
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 6, 4)
+factor_3 (8, 6, 1, 2)
+core (5, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07591901754140853, Validation loss: 0.605358535194397, Validation accuracy: 0.8902
+factor_0 (8, 1, 2, 5)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 6, 4)
+factor_3 (8, 6, 1, 2)
+core (5, 2, 4, 2, 10)
+Choosen edge between factor_0 and core
+After step 17
+--core_ranks 6 2 4 2 --ring_ranks 2 4 5 1
+Train full model
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (6, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07389556073904037, Validation loss: 0.5758209228515625, Validation accuracy: 0.8901
+Epoch: 1, Train loss: 0.0724071849155426, Validation loss: 0.6777163263320923, Validation accuracy: 0.8847
+Epoch: 2, Train loss: 0.07021912936389446, Validation loss: 0.6088736709594726, Validation accuracy: 0.8908
+Epoch: 3, Train loss: 0.0740065324997902, Validation loss: 0.4967203733444214, Validation accuracy: 0.8911
+Epoch: 4, Train loss: 0.06834718818068504, Validation loss: 0.5895652711868287, Validation accuracy: 0.8909
+Epoch: 5, Train loss: 0.06981696546912193, Validation loss: 0.6190038736343384, Validation accuracy: 0.8872
+Epoch: 6, Train loss: 0.06944734528183936, Validation loss: 0.5805768699645996, Validation accuracy: 0.8922
+Epoch: 7, Train loss: 0.06741351272821426, Validation loss: 0.5513652627944946, Validation accuracy: 0.8883
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (7, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.061881744552254675, Validation loss: 0.5390085823059082, Validation accuracy: 0.8896
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 3)
+core (6, 2, 4, 3, 10)
+Epoch: 0, Train loss: 0.06273986844182014, Validation loss: 0.5392960090637207, Validation accuracy: 0.8903
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 6, 4)
+factor_3 (8, 6, 1, 2)
+core (6, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.059132235785722735, Validation loss: 0.5377692325592041, Validation accuracy: 0.8907
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 5)
+factor_3 (8, 5, 1, 2)
+core (6, 2, 5, 2, 10)
+Epoch: 0, Train loss: 0.06319621823072434, Validation loss: 0.5365013523101807, Validation accuracy: 0.8905
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (6, 3, 4, 2, 10)
+Epoch: 0, Train loss: 0.061983525961637496, Validation loss: 0.5367764911651611, Validation accuracy: 0.8904
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 6)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (6, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.062465224642455575, Validation loss: 0.537404175567627, Validation accuracy: 0.89
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 6)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (6, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.061048843450546265, Validation loss: 0.5358275808334351, Validation accuracy: 0.8896
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 2, 2)
+core (6, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.06047467301726341, Validation loss: 0.5363309669494629, Validation accuracy: 0.8898
+factor_0 (8, 2, 2, 6)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 2, 2)
+core (6, 2, 4, 2, 10)
+Choosen edge between factor_0 and core
+After step 18
+--core_ranks 7 2 4 2 --ring_ranks 2 4 5 1
+Train full model
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (7, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.07074800378918648, Validation loss: 0.5476124801635742, Validation accuracy: 0.8925
+Epoch: 1, Train loss: 0.06868347321271896, Validation loss: 0.6540899646759033, Validation accuracy: 0.8884
+Epoch: 2, Train loss: 0.06528270992994309, Validation loss: 0.625703094291687, Validation accuracy: 0.8887
+Epoch: 3, Train loss: 0.06831069742679596, Validation loss: 0.8307947021484375, Validation accuracy: 0.8901
+Epoch: 4, Train loss: 0.06594850773811341, Validation loss: 0.5587538087844849, Validation accuracy: 0.8949
+Epoch: 5, Train loss: 0.0615499084687233, Validation loss: 0.4998018072128296, Validation accuracy: 0.891
+Epoch: 6, Train loss: 0.06197201744168997, Validation loss: 0.5732447627067566, Validation accuracy: 0.89
+Epoch: 7, Train loss: 0.0643288955438137, Validation loss: 0.6366737955093383, Validation accuracy: 0.8941
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (7, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.06176528040766716, Validation loss: 0.6085917072296143, Validation accuracy: 0.8955
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_1
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 4, 3)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (7, 3, 4, 2, 10)
+Epoch: 0, Train loss: 0.06133375746369362, Validation loss: 0.6149037210464477, Validation accuracy: 0.895
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 3, 7)
+factor_1 (8, 3, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (7, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.0613941719186306, Validation loss: 0.609521901512146, Validation accuracy: 0.8959
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_0
+factor_0 (8, 1, 2, 8)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (8, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.06313738701462746, Validation loss: 0.6097034696578979, Validation accuracy: 0.8955
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 6, 4)
+factor_3 (8, 6, 1, 2)
+core (7, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.06214500360250473, Validation loss: 0.6111878490447998, Validation accuracy: 0.8948
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_2
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 5)
+factor_3 (8, 5, 1, 2)
+core (7, 2, 5, 2, 10)
+Epoch: 0, Train loss: 0.06055925801515579, Validation loss: 0.6116269449234009, Validation accuracy: 0.8952
+Gain: 1e-09
+Gain: 1e-09
+Train edge rank_3
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 1, 3)
+core (7, 2, 4, 3, 10)
+Epoch: 0, Train loss: 0.06287108534216881, Validation loss: 0.6126517248153687, Validation accuracy: 0.8951
+Gain: 1e-09
+Gain: 1e-09
+Train edge link_right
+factor_0 (8, 2, 2, 7)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 2, 2)
+core (7, 2, 4, 2, 10)
+Epoch: 0, Train loss: 0.06016125201463699, Validation loss: 0.610970598602295, Validation accuracy: 0.8947
+factor_0 (8, 2, 2, 7)
+factor_1 (8, 2, 4, 2)
+factor_2 (8, 4, 5, 4)
+factor_3 (8, 5, 2, 2)
+core (7, 2, 4, 2, 10)
+Choosen edge between factor_1 and factor_2
+After step 19
+--core_ranks 7 2 4 2 --ring_ranks 2 5 5 1
+Tensor shapes
+factor_0 (8, 1, 2, 7)
+factor_1 (8, 2, 5, 2)
+factor_2 (8, 5, 5, 4)
+factor_3 (8, 5, 1, 2)
+core (7, 2, 4, 2, 10)
+Accuracy: 0.8941

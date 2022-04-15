@@ -59,13 +59,13 @@ class TensorizedBasicBlock(nn.Module):
 class TensorizedResNet(nn.Module):
     def __init__(self, block, num_blocks, ranks, space_rank, num_classes=10):
         super(TensorizedResNet, self).__init__()
-        self.in_planes = (4, 4)
+        self.in_planes = (4, 2, 2)
 
         self.conv1 = nn.Conv2d(3, 16, kernel_size=(3, 3), stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(16)
-        self.layer1 = self._make_layer(block, (4, 4), ranks, space_rank, num_blocks[0], stride=1)
-        self.layer2 = self._make_layer(block, (4, 8), ranks, space_rank, num_blocks[1], stride=2)
-        self.layer3 = self._make_layer(block, (8, 8), ranks, space_rank, num_blocks[2], stride=2)
+        self.layer1 = self._make_layer(block, (4, 2, 2), ranks, space_rank, num_blocks[0], stride=1)
+        self.layer2 = self._make_layer(block, (4, 4, 2), ranks, space_rank, num_blocks[1], stride=2)
+        self.layer3 = self._make_layer(block, (4, 4, 4), ranks, space_rank, num_blocks[2], stride=2)
         self.classifier = nn.Sequential(
             nn.AvgPool2d(8),
             nn.Flatten(),
