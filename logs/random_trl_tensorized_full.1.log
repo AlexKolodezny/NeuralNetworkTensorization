@@ -1,0 +1,342 @@
+['ResNet-Random-TRL-tensorized-full.py', '--tensorization', '8', '8', '8', '8', '--seed', '1', '--device', 'cuda:3']
+Initializing dataloader
+Files already downloaded and verified
+Files already downloaded and verified
+Dataloader has initialized
+Initializing model
+Model initialized
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 1, 1)
+factor_2 (1, 1, 8, 1, 1)
+factor_3 (1, 1, 1, 8, 1)
+factor_4 (1, 1, 1, 1, 10)
+Testing model
+Tests passed
+Stop warm up model
+Train full model
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 1, 1)
+factor_2 (1, 1, 8, 1, 1)
+factor_3 (1, 1, 1, 8, 1)
+factor_4 (1, 1, 1, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 1, 1)
+factor_2 (1, 1, 8, 1, 2)
+factor_3 (1, 1, 1, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Choosen edge between factor_4 and factor_2
+After step 0
+--ranks '[[8, 1, 1, 1, 1], [1, 8, 1, 1, 1], [1, 1, 8, 1, 2], [1, 1, 1, 8, 1], [1, 1, 2, 1, 10]]'
+Train full model
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 1, 1)
+factor_2 (1, 1, 8, 1, 2)
+factor_3 (1, 1, 1, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 1, 1)
+factor_2 (1, 1, 8, 2, 2)
+factor_3 (1, 1, 2, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Choosen edge between factor_3 and factor_2
+After step 1
+--ranks '[[8, 1, 1, 1, 1], [1, 8, 1, 1, 1], [1, 1, 8, 2, 2], [1, 1, 2, 8, 1], [1, 1, 2, 1, 10]]'
+Train full model
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 1, 1)
+factor_2 (1, 1, 8, 2, 2)
+factor_3 (1, 1, 2, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 2, 1)
+factor_2 (1, 1, 8, 2, 2)
+factor_3 (1, 2, 2, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Choosen edge between factor_3 and factor_1
+After step 2
+--ranks '[[8, 1, 1, 1, 1], [1, 8, 1, 2, 1], [1, 1, 8, 2, 2], [1, 2, 2, 8, 1], [1, 1, 2, 1, 10]]'
+Train full model
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 2, 1)
+factor_2 (1, 1, 8, 2, 2)
+factor_3 (1, 2, 2, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 2, 1)
+factor_2 (1, 1, 8, 3, 2)
+factor_3 (1, 2, 3, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Choosen edge between factor_3 and factor_2
+After step 3
+--ranks '[[8, 1, 1, 1, 1], [1, 8, 1, 2, 1], [1, 1, 8, 3, 2], [1, 2, 3, 8, 1], [1, 1, 2, 1, 10]]'
+Train full model
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 2, 1)
+factor_2 (1, 1, 8, 3, 2)
+factor_3 (1, 2, 3, 8, 1)
+factor_4 (1, 1, 2, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 2, 1)
+factor_2 (1, 1, 8, 3, 3)
+factor_3 (1, 2, 3, 8, 1)
+factor_4 (1, 1, 3, 1, 10)
+Choosen edge between factor_4 and factor_2
+After step 4
+--ranks '[[8, 1, 1, 1, 1], [1, 8, 1, 2, 1], [1, 1, 8, 3, 3], [1, 2, 3, 8, 1], [1, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 2, 1)
+factor_2 (1, 1, 8, 3, 3)
+factor_3 (1, 2, 3, 8, 1)
+factor_4 (1, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 3, 1)
+factor_2 (1, 1, 8, 3, 3)
+factor_3 (1, 3, 3, 8, 1)
+factor_4 (1, 1, 3, 1, 10)
+Choosen edge between factor_3 and factor_1
+After step 5
+--ranks '[[8, 1, 1, 1, 1], [1, 8, 1, 3, 1], [1, 1, 8, 3, 3], [1, 3, 3, 8, 1], [1, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 1, 1, 1)
+factor_1 (1, 8, 1, 3, 1)
+factor_2 (1, 1, 8, 3, 3)
+factor_3 (1, 3, 3, 8, 1)
+factor_4 (1, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 1, 1, 2)
+factor_1 (1, 8, 1, 3, 1)
+factor_2 (1, 1, 8, 3, 3)
+factor_3 (1, 3, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_4 and factor_0
+After step 6
+--ranks '[[8, 1, 1, 1, 2], [1, 8, 1, 3, 1], [1, 1, 8, 3, 3], [1, 3, 3, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 1, 1, 2)
+factor_1 (1, 8, 1, 3, 1)
+factor_2 (1, 1, 8, 3, 3)
+factor_3 (1, 3, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 2, 1, 2)
+factor_1 (1, 8, 1, 3, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (1, 3, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_2 and factor_0
+After step 7
+--ranks '[[8, 1, 2, 1, 2], [1, 8, 1, 3, 1], [2, 1, 8, 3, 3], [1, 3, 3, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 2, 1, 2)
+factor_1 (1, 8, 1, 3, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (1, 3, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 2, 1, 2)
+factor_1 (1, 8, 1, 4, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (1, 4, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_3 and factor_1
+After step 8
+--ranks '[[8, 1, 2, 1, 2], [1, 8, 1, 4, 1], [2, 1, 8, 3, 3], [1, 4, 3, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 2, 1, 2)
+factor_1 (1, 8, 1, 4, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (1, 4, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 2, 2, 2)
+factor_1 (1, 8, 1, 4, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (2, 4, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_3 and factor_0
+After step 9
+--ranks '[[8, 1, 2, 2, 2], [1, 8, 1, 4, 1], [2, 1, 8, 3, 3], [2, 4, 3, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 2, 2, 2)
+factor_1 (1, 8, 1, 4, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (2, 4, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 2, 2, 2)
+factor_1 (1, 8, 1, 5, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (2, 5, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_3 and factor_1
+After step 10
+--ranks '[[8, 1, 2, 2, 2], [1, 8, 1, 5, 1], [2, 1, 8, 3, 3], [2, 5, 3, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 2, 2, 2)
+factor_1 (1, 8, 1, 5, 1)
+factor_2 (2, 1, 8, 3, 3)
+factor_3 (2, 5, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 2, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (2, 2, 8, 3, 3)
+factor_3 (2, 5, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_2 and factor_1
+After step 11
+--ranks '[[8, 1, 2, 2, 2], [1, 8, 2, 5, 1], [2, 2, 8, 3, 3], [2, 5, 3, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 2, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (2, 2, 8, 3, 3)
+factor_3 (2, 5, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 3, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 3, 3)
+factor_3 (2, 5, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_2 and factor_0
+After step 12
+--ranks '[[8, 1, 3, 2, 2], [1, 8, 2, 5, 1], [3, 2, 8, 3, 3], [2, 5, 3, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 3, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 3, 3)
+factor_3 (2, 5, 3, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 3, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 4, 3)
+factor_3 (2, 5, 4, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_3 and factor_2
+After step 13
+--ranks '[[8, 1, 3, 2, 2], [1, 8, 2, 5, 1], [3, 2, 8, 4, 3], [2, 5, 4, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 3, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 4, 3)
+factor_3 (2, 5, 4, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 1, 3, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_3 and factor_2
+After step 14
+--ranks '[[8, 1, 3, 2, 2], [1, 8, 2, 5, 1], [3, 2, 8, 5, 3], [2, 5, 5, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 1, 3, 2, 2)
+factor_1 (1, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 2, 3, 2, 2)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Choosen edge between factor_1 and factor_0
+After step 15
+--ranks '[[8, 2, 3, 2, 2], [2, 8, 2, 5, 1], [3, 2, 8, 5, 3], [2, 5, 5, 8, 1], [2, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 2, 3, 2, 2)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (2, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 2, 3, 2, 3)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (3, 1, 3, 1, 10)
+Choosen edge between factor_4 and factor_0
+After step 16
+--ranks '[[8, 2, 3, 2, 3], [2, 8, 2, 5, 1], [3, 2, 8, 5, 3], [2, 5, 5, 8, 1], [3, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 2, 3, 2, 3)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (3, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 2, 3, 2, 4)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (4, 1, 3, 1, 10)
+Choosen edge between factor_4 and factor_0
+After step 17
+--ranks '[[8, 2, 3, 2, 4], [2, 8, 2, 5, 1], [3, 2, 8, 5, 3], [2, 5, 5, 8, 1], [4, 1, 3, 1, 10]]'
+Train full model
+factor_0 (8, 2, 3, 2, 4)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 1)
+factor_4 (4, 1, 3, 1, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 2, 3, 2, 4)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 2)
+factor_4 (4, 1, 3, 2, 10)
+Choosen edge between factor_4 and factor_3
+After step 18
+--ranks '[[8, 2, 3, 2, 4], [2, 8, 2, 5, 1], [3, 2, 8, 5, 3], [2, 5, 5, 8, 2], [4, 1, 3, 2, 10]]'
+Train full model
+factor_0 (8, 2, 3, 2, 4)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 3)
+factor_3 (2, 5, 5, 8, 2)
+factor_4 (4, 1, 3, 2, 10)
+Gain: 1
+Gain: 1
+factor_0 (8, 2, 3, 2, 4)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 4)
+factor_3 (2, 5, 5, 8, 2)
+factor_4 (4, 1, 4, 2, 10)
+Choosen edge between factor_4 and factor_2
+After step 19
+--ranks '[[8, 2, 3, 2, 4], [2, 8, 2, 5, 1], [3, 2, 8, 5, 4], [2, 5, 5, 8, 2], [4, 1, 4, 2, 10]]'
+Tensor shapes
+factor_0 (8, 2, 3, 2, 4)
+factor_1 (2, 8, 2, 5, 1)
+factor_2 (3, 2, 8, 5, 4)
+factor_3 (2, 5, 5, 8, 2)
+factor_4 (4, 1, 4, 2, 10)
+Accuracy: 0.1012

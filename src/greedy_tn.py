@@ -85,3 +85,26 @@ def choose_and_increase_edge(original_model, layer_name, train_edge, gain, devic
     print("Choosen edge between {} and {}".format(edgenode1, edgenode2))
     for param in model.parameters():
         param.requires_grad = True
+
+
+def random_choose_and_increase_edge(original_model, layer_name, device, get_layer=None, set_layer=None, gain=1):
+    if get_layer is None or set_layer is None:
+        get_layer = lambda model: getattr(model, layer_name)
+        set_layer = lambda model, new_layer: setattr(modle, layer_name, new_layer)
+    # layer = getattr(original_model, layer_name)
+    layer = get_layer(original_model)
+    tensor_network = layer.construct_network()
+    edges = list(tn.get_all_nondangling(tensor_network))
+    edges_results = []
+    edge = np.random.choice(edges)
+    model = deepcopy(original_model)
+    new_layer, cloned_edge = increase_edge_in_layer(get_layer(model), edge, device=device, gain=gain)
+    set_layer(model, new_layer)
+    get_layer(model).clear_masks()
+    set_layer(original_model, get_layer(model))
+
+    for core in get_layer(model).construct_network():
+        print(core.name, core.shape)
+    print("Choosen edge between {} and {}".format(edge.node1.name, edge.node2.name))
+    for param in model.parameters():
+        param.requires_grad = True

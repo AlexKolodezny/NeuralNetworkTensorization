@@ -30,7 +30,7 @@ if args.resume:
     model = resnet32()
     model.classifier = nn.Sequential(
         nn.Flatten(),
-        nn.Linear(8192, 10),
+        nn.Linear(4096, 10),
     )
     assert args.filename is not None, "Filename required for resume"
     path = "./models/" + args.filename + ".pt"
@@ -49,6 +49,8 @@ else:
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-1, momentum=0.9, weight_decay=2e-4)
 criterion = nn.CrossEntropyLoss(reduction="mean")
 def learning_rate(epoch):
+    if epoch < 10:
+        return epoch * 0.1 + 0.1
     if epoch <= 100:
         return 1
     elif epoch <= 150:

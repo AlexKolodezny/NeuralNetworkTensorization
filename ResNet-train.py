@@ -17,6 +17,7 @@ def calculate_parameters(model):
 
 
 parser = argparse.ArgumentParser()
+parser.add_argument("--classifier", help="type of tensor network", type=str)
 parser.add_argument("--seed", help="random seed", default=12345, type=int)
 parser.add_argument("--n_epochs", help="number of epochs", default=200, type=int)
 parser.add_argument("--resume", action='store_true')
@@ -24,6 +25,8 @@ parser.add_argument("--filename", help="File to store checkpoints", type=str)
 parser.add_argument("--ranks", type=str)
 parser.add_argument("--device", default="cuda:0", type=str)
 parser.add_argument("--tensorization", default=[8, 8, 8, 8], nargs="+", type=int)
+parser.add_argument("--core_ranks", nargs="+", type=int)
+parser.add_argument("--ring_ranks", nargs="+", type=int)
 args = parser.parse_args()
 
 print(sys.argv)
@@ -37,28 +40,38 @@ print("Dataloader has initialized")
 
 from src.networks.resnet import resnet32
 from src.layers.full_linked import FullLinkedLayer
+from src.layers.trl_ringed import TRLRinged
 
 print("Initializing model")
-if args.resume:
-    model = resnet32()
+set_random_seed(args.seed)
+model = resnet32()
+if args.classifier == "gap":
+    pass
+elif args.classifier == "linear":
+    model.classifier = nn.Sequential(
+        nn.Flatten(),
+        nn.Linear(4096, 10),
+    )
+elif args.classifier == "full":
     model.classifier = nn.Sequential(
         nn.Flatten(),
         nn.Unflatten(1, tuple(args.tensorization)),
         FullLinkedLayer(tuple(args.tensorization), (10,), json.loads(args.ranks)),
     )
+elif args.classifier == "ringed":
+    model.classifier = nn.Sequential(
+        nn.Flatten(),
+        nn.Unflatten(1, tuple(args.tensorization)),
+        TRLRinged(tuple(args.tensorization), tuple(args.core_ranks), tuple(args.ring_ranks), 10),
+    )
+
+if args.resume:
     assert args.filename is not None, "Filename required for resume"
     path = "./models/" + args.filename + ".pt"
     checkpoint = torch.load(path)
     model.load_state_dict(checkpoint["model"])
     start_epoch = checkpoint["epoch"] + 1
 else:
-    set_random_seed(args.seed)
-    model = resnet32()
-    model.classifier = nn.Sequential(
-        nn.Flatten(),
-        nn.Unflatten(1, tuple(args.tensorization)),
-        FullLinkedLayer(tuple(args.tensorization), (10,), json.loads(args.ranks)),
-    )
     start_epoch = 0
 
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-1, momentum=0.9, weight_decay=2e-4)

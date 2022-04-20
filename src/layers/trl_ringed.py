@@ -13,7 +13,7 @@ from torch.nn.parameter import Parameter
 from torch.nn.init import _no_grad_normal_
 
 
-class TRLMasked(nn.Module):
+class TRLRinged(nn.Module):
     def __init__(
         self,
         input_shape: Tuple[int, ...],
@@ -29,7 +29,7 @@ class TRLMasked(nn.Module):
         assert len(input_shape) == len(input_ranks)
 
         factory_kwargs = {"device": device, "dtype": dtype}
-        super(TRLMasked, self).__init__()
+        super(TRLRinged, self).__init__()
 
         self.input_shape = input_shape
         self.input_ranks = input_ranks
