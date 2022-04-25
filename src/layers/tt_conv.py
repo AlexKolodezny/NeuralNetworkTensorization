@@ -55,26 +55,37 @@ class TTConv(nn.Module):
             for i in range(len(self.input_chanel_shape) - 1)
         ])
         self.last_factor = Parameter(torch.empty((self.input_chanel_shape[-1], self.ranks[-1], self.output_chanel_shape[-1]), **factory_kwargs))
+        self.masks = {}
         self.reset_parameters()
 
+    def clear_masks(self):
+        self.masks = {}
+
+    def masked_tensor(self, tensor, name):
+        mask = self.masks.get(name, None)
+        if mask is None:
+            return tensor
+        res = tensor * mask.detach()
+        res += tensor.detach() * mask.detach().logical_not()
+        return res
 
     def construct_network(self, input=None):
         if input is not None:
             tensor = tn.Node(
-                input,
+                self.masked_tensor(input, "input"),
                 name="input",
                 axis_names=["batch"] + [f"in_{i}" for i, _ in enumerate(self.input_chanel_shape)] + ["rank_0", "H", "W"],
                 backend="pytorch")
         else:
             space_factor = tn.Node(
-                self.space_factor,
+                self.masked_tensor(self.space_factor, "space_factor"),
                 name="space_factor",
                 axis_names=["rank_0", "space_in", "kH", "kW"],
                 backend="pytorch",
             )
         factors = [
             tn.Node(
-                self.factors[i],
+                self.masked_tensor(self.factors[i], f"factor_{i}"),
                 name=f"factor_{i}",
                 axis_names=[f"in_{i}", f"rank_{i}", f"rank_{i + 1}", f"out_{i}"],
                 backend="pytorch")
@@ -82,7 +93,7 @@ class TTConv(nn.Module):
         ]
         last = len(self.input_chanel_shape) - 1
         factors = factors + [tn.Node(
-                self.last_factor,
+                self.masked_tensor(self.last_factor, f"factor_{last}"),
                 name=f"factor_{last}",
                 axis_names=[f"in_{last}", f"rank_{last}", f"out_{last}"],
                 backend="pytorch")]
@@ -137,7 +148,7 @@ class TTConv(nn.Module):
         # tensor = input.reshape(batch_size * channel, 1, H, W)
         tensor = F.conv2d(
             tensor,
-            self.space_factor.repeat((channel, 1, 1, 1)),
+            self.masked_tensor(self.space_factor, "space_factor").repeat((channel, 1, 1, 1)),
             padding=self.padding,
             stride=self.stride,
             groups=channel,
@@ -149,7 +160,7 @@ class TTConv(nn.Module):
         #     stride=self.stride,
         # )
         _, _, H, W = tensor.shape
-        tensor=tensor.reshape((batch_size,) + self.input_chanel_shape + (self.space_rank, H, W))
+        tensor=tensor.reshape((batch_size,) + self.input_chanel_shape + (self.space_factor.shape[0], H, W))
         # tensor = torch.tensordot(tensor, self.core, dims=([1 + len(self.input_chanel_shape)], [len(self.input_chanel_shape)]))
         # for i, _ in enumerate(self.input_chanel_shape):
         #     tensor = torch.tensordot(
@@ -159,7 +170,7 @@ class TTConv(nn.Module):
         # tensor = tensor.permute([0] + list(range(3, len(tensor.shape))) + [1, 2])
         
         cores, dangling_edges = self.construct_network(
-            input=tensor.reshape((batch_size,) + self.input_chanel_shape + (self.space_rank, H, W))
+            input=tensor.reshape((batch_size,) + self.input_chanel_shape + (self.space_factor.shape[0], H, W))
         )
         # tensor = cores[-1]
         # tensor = tn.contract_between(tensor, cores[-2])

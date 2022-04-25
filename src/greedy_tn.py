@@ -5,7 +5,6 @@ import torch
 
 def append_to_axis(data, axis, gain, tensor=None, device="cpu"):
     with torch.no_grad():
-        print("Gain: {}".format(gain))
         std = torch.sqrt(torch.norm(data)**2 / np.prod(data.shape)) * gain
         if tensor is not None:
             return torch.cat((data, tensor), dim=axis)
@@ -81,6 +80,41 @@ def choose_and_increase_edge(original_model, layer_name, train_edge, gain, devic
     set_layer(original_model, result_layer)
 
     for core in get_layer(model).construct_network():
+        print(core.name, core.shape)
+    print("Choosen edge between {} and {}".format(edgenode1, edgenode2))
+    for param in model.parameters():
+        param.requires_grad = True
+
+
+def choose_and_increase_edge_on_layers(original_model, train_edge, gain, device, get_set_layers):
+    layer = get_set_layers[0][0](original_model)
+    tensor_network = layer.construct_network()
+    edges = list(tn.get_all_nondangling(tensor_network))
+    edges_results = []
+    for edge in edges:
+        model = deepcopy(original_model)
+
+        for param in model.parameters():
+            param.requires_grad = False
+        for get_layer, set_layer in get_set_layers:
+            new_layer, cloned_edge = increase_edge_in_layer(get_layer(model), edge, device=device, gain=gain)
+            set_layer(model, new_layer)
+            for param in get_layer(model).parameters():
+                param.requires_grad = False
+
+            cloned_edge.node1.tensor.requires_grad = True
+            cloned_edge.node2.tensor.requires_grad = True
+        
+        print("Train edge {}".format(edge.name))
+        final_loss = train_edge(model)
+        for get_layer, _ in get_set_layers:
+            get_layer(model).clear_masks()
+        edges_results.append(([get_layer(model) for get_layer, _ in get_set_layers], final_loss, edge.node1.name, edge.node2.name))
+    result_layers, _, edgenode1, edgenode2 = min(edges_results, key=lambda x: x[1])
+    for (_, set_layer), layer in zip(get_set_layers, result_layers):
+        set_layer(original_model, layer)
+
+    for core in get_set_layers[0][0](model).construct_network():
         print(core.name, core.shape)
     print("Choosen edge between {} and {}".format(edgenode1, edgenode2))
     for param in model.parameters():

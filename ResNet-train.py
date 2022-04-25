@@ -24,9 +24,10 @@ parser.add_argument("--resume", action='store_true')
 parser.add_argument("--filename", help="File to store checkpoints", type=str)
 parser.add_argument("--ranks", type=str)
 parser.add_argument("--device", default="cuda:0", type=str)
-parser.add_argument("--tensorization", default=[8, 8, 8, 8], nargs="+", type=int)
+parser.add_argument("--tensorization", default=[64, 8, 8], nargs="+", type=int)
 parser.add_argument("--core_ranks", nargs="+", type=int)
 parser.add_argument("--ring_ranks", nargs="+", type=int)
+parser.add_argument("--network", type=str, default="resnet")
 args = parser.parse_args()
 
 print(sys.argv)
@@ -39,19 +40,31 @@ val_dataloader = DataLoader(val_dataset, batch_size=128)
 print("Dataloader has initialized")
 
 from src.networks.resnet import resnet32
+from src.networks.wide_resnet import Wide_ResNet
 from src.layers.full_linked import FullLinkedLayer
 from src.layers.trl_ringed import TRLRinged
 
 print("Initializing model")
 set_random_seed(args.seed)
-model = resnet32()
+if args.network == "resnet":
+    model = resnet32()
+elif args.network == "wide_resnet":
+    model = Wide_ResNet(16, 8, 0.3, 10)
+else: 
+    assert False, "Unknown network"
 if args.classifier == "gap":
     pass
 elif args.classifier == "linear":
-    model.classifier = nn.Sequential(
-        nn.Flatten(),
-        nn.Linear(4096, 10),
-    )
+    if args.network == "resnet":
+        model.classifier = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(4096, 10),
+        )
+    elif args.network == "wide_resnet":
+        model.classifier = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(4096 * 8, 10),
+        )
 elif args.classifier == "full":
     model.classifier = nn.Sequential(
         nn.Flatten(),
@@ -64,6 +77,9 @@ elif args.classifier == "ringed":
         nn.Unflatten(1, tuple(args.tensorization)),
         TRLRinged(tuple(args.tensorization), tuple(args.core_ranks), tuple(args.ring_ranks), 10),
     )
+else:
+    print("Unknown classifier")
+    assert False
 
 if args.resume:
     assert args.filename is not None, "Filename required for resume"
@@ -76,7 +92,7 @@ else:
 
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-1, momentum=0.9, weight_decay=2e-4)
 criterion = nn.CrossEntropyLoss(reduction="mean")
-def learning_rate(epoch):
+def learning_rate_resnet(epoch):
     if epoch < 10:
         return epoch * 0.1 + 0.1
     if epoch <= 100:
@@ -85,7 +101,10 @@ def learning_rate(epoch):
         return 0.1
     else:
         return 0.01
-scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=learning_rate, verbose=True)
+if args.network == "resnet":
+    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=learning_rate_resnet, verbose=True)
+elif args.network == "wide_resnet":
+    scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[60, 120, 160], gamma=0.2)
 n_epochs = args.n_epochs
 
 device = args.device if torch.cuda.is_available() else torch.device("cpu")
