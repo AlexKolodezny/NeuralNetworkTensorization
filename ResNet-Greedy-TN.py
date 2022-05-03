@@ -26,6 +26,7 @@ parser.add_argument("--tensorization", nargs="+", type=int, default=[8, 8, 8, 8]
 parser.add_argument("--pretrained_filename", type=str, default=None)
 parser.add_argument("--classifier", type=str, default="full")
 parser.add_argument("--network", type=str, default="resnet")
+parser.add_argument("--iterations", default=20, type=int)
 args = parser.parse_args()
 
 print(sys.argv)
@@ -150,7 +151,7 @@ def train_edge(model):
     print("After training edge")
     return np.sum(all_losses)
 
-for i in range(20):
+for i in range(args.iterations):
     if args.pretrained_filename is not None:
         for param in model.parameters():
             param.requires_grad = False

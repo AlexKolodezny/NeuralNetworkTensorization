@@ -22,6 +22,7 @@ parser.add_argument("--edge_train", default=2, type=int)
 parser.add_argument("--slice_gain", default=1, type=float)
 parser.add_argument("--warmup", default=10, type=int)
 parser.add_argument("--learning_rate", default=0.1, type=float)
+parser.add_argument("--iterations", default=20, type=int)
 # parser.add_argument("--tensorization", nargs="+", type=int, default=[8, 8, 8, 8])
 # parser.add_argument("--pretrained_filename", type=str, default=None)
 parser.add_argument("--convolution", type=str, default="tt")
@@ -170,7 +171,7 @@ def train_edge(model):
     print("After training edge")
     return np.sum(all_losses)
 
-for i in range(20):
+for i in range(args.iterations):
     # if args.pretrained_filename is not None:
     #     for param in model.parameters():
     #         param.requires_grad = False
@@ -186,10 +187,11 @@ for i in range(20):
     train(model, train_dataloader, val_dataloader, criterion, optimizer, scheduler=None, n_epochs=args.full_train, device=device)
     choose_and_increase_edge_on_layers(model, train_edge, args.slice_gain, device, get_set_layers)
     print("After step {}".format(i))
-    # ranks = []
-    # for factor in get_set_layers[0][0](model).factors:
-    #     ranks.append(factor.shape)
-    # print("--ranks '{}'".format(json.dumps(ranks)))
+    ranks = []
+    for factor in get_set_layers[0][0](model).factors:
+        ranks.append(factor.shape[2])
+    space_rank = get_set_layers[0][0](model).space_factor.shape[0]
+    print("--ranks {} --space_rank {}".format(" ".join(map(str, ranks)), space_rank))
 
 print("Tensor shapes")
 for core in get_set_layers[0][0](model).construct_network():

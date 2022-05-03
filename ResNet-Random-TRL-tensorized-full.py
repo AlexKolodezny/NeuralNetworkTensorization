@@ -24,6 +24,7 @@ parser.add_argument("--slice_gain", default=1, type=float)
 parser.add_argument("--warmup", default=10, type=int)
 parser.add_argument("--learning_rate", default=0.1, type=float)
 parser.add_argument("--tensorization", nargs="+", type=int, default=[8, 8, 8, 8])
+parser.add_argument("--iterations", default=20, type=int)
 args = parser.parse_args()
 
 print(sys.argv)
@@ -75,7 +76,7 @@ from src.greedy_tn import choose_and_increase_edge, random_choose_and_increase_e
 
 print("Stop warm up model")
 
-for i in range(20):
+for i in range(args.iterations):
     print("Train full model")
     for core in get_layer(model).construct_network():
         print(core.name, core.shape)
