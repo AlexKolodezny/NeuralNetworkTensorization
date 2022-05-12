@@ -1,0 +1,22 @@
+['ResNet-train.py', '--network', 'wide_resnet', '--classifier', 'full', '--tensorization', '8', '8', '8', '8', '8', '--ranks', '[[8, 2, 1, 3, 1, 1], [2, 8, 2, 1, 1, 1], [1, 2, 8, 1, 2, 3], [3, 1, 1, 8, 1, 2], [1, 1, 2, 1, 8, 1], [1, 1, 3, 2, 1, 10]]', '--seed', '6', '--device', 'cuda:2']
+Initializing dataloader
+Files already downloaded and verified
+Files already downloaded and verified
+Dataloader has initialized
+Initializing model
+Model initialized
+Testing model
+Tests passed
+Epoch: 0, Train loss: 1.4763756344604493, Validation loss: 1.127803259563446, Validation accuracy: 0.6143
+Epoch: 1, Train loss: 0.9575220882797241, Validation loss: 1.0250464644432067, Validation accuracy: 0.7004
+Epoch: 2, Train loss: 0.763373911151886, Validation loss: 0.7903921450614929, Validation accuracy: 0.729
+Epoch: 3, Train loss: 0.6431697434616089, Validation loss: 0.6839142645835876, Validation accuracy: 0.7667
+Epoch: 4, Train loss: 0.5784382457160949, Validation loss: 0.5981998490333558, Validation accuracy: 0.7991
+Epoch: 5, Train loss: 0.502165115814209, Validation loss: 0.6534068002223968, Validation accuracy: 0.7927
+Epoch: 6, Train loss: 0.46036310733795166, Validation loss: 0.5714732221603394, Validation accuracy: 0.8206
+Epoch: 7, Train loss: 0.4333438944911957, Validation loss: 0.6119379507064819, Validation accuracy: 0.8192
+Epoch: 8, Train loss: 0.4012081601715088, Validation loss: 0.5830477630615234, Validation accuracy: 0.8119
+Epoch: 9, Train loss: 0.37279613763809205, Validation loss: 0.5651798818588257, Validation accuracy: 0.8238
+Epoch: 10, Train loss: 0.36602909740448, Validation loss: 0.6407197612762451, Validation accuracy: 0.8066
+Epoch: 11, Train loss: 0.3461382084655762, Validation loss: 0.6876343611717224, Validation accuracy: 0.8073
+Epoch: 12, Train loss: 0.31932686574935915, Validation loss: 0.6036183463573456, Validation accuracy: 0.82

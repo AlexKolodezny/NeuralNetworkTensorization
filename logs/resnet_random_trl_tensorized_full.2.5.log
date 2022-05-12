@@ -1,0 +1,411 @@
+['ResNet-train.py', '--classifier', 'full', '--tensorization', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '--ranks', '[[2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2], [2, 2, 1, 2, 1, 2, 2, 1, 1, 1, 2, 2, 2], [1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1], [1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1], [1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1], [1, 2, 2, 1, 1, 2, 1, 2, 1, 2, 1, 2, 2], [1, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1], [1, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1], [1, 1, 2, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1], [1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 3, 1], [1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 1], [1, 2, 1, 1, 1, 2, 1, 1, 1, 3, 3, 2, 1], [2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 10]]', '--seed', '2', '--device', 'cuda:1']
+Initializing dataloader
+Files already downloaded and verified
+Files already downloaded and verified
+Dataloader has initialized
+Initializing model
+Adjusting learning rate of group 0 to 1.0000e-02.
+Model initialized
+Testing model
+Tests passed
+Adjusting learning rate of group 0 to 2.0000e-02.
+Epoch: 0, Train loss: 1.9156746231842041, Validation loss: 1.641978477859497, Validation accuracy: 0.414
+Adjusting learning rate of group 0 to 3.0000e-02.
+Epoch: 1, Train loss: 1.4347390239715576, Validation loss: 1.2145819679260255, Validation accuracy: 0.5625
+Adjusting learning rate of group 0 to 4.0000e-02.
+Epoch: 2, Train loss: 1.1348082570266724, Validation loss: 1.0029236557006835, Validation accuracy: 0.6416
+Adjusting learning rate of group 0 to 5.0000e-02.
+Epoch: 3, Train loss: 0.9458042493247986, Validation loss: 0.9557167222976685, Validation accuracy: 0.6794
+Adjusting learning rate of group 0 to 6.0000e-02.
+Epoch: 4, Train loss: 0.8262232360649109, Validation loss: 0.884064426612854, Validation accuracy: 0.7077
+Adjusting learning rate of group 0 to 7.0000e-02.
+Epoch: 5, Train loss: 0.7483877181243896, Validation loss: 0.8674991096496582, Validation accuracy: 0.6991
+Adjusting learning rate of group 0 to 8.0000e-02.
+Epoch: 6, Train loss: 0.6976290327453614, Validation loss: 0.7507032118797302, Validation accuracy: 0.7394
+Adjusting learning rate of group 0 to 9.0000e-02.
+Epoch: 7, Train loss: 0.6559109697532653, Validation loss: 0.8187011152267456, Validation accuracy: 0.726
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 8, Train loss: 0.6338577585220337, Validation loss: 0.6513888239860535, Validation accuracy: 0.7765
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 9, Train loss: 0.609530450553894, Validation loss: 0.7524292388439179, Validation accuracy: 0.7519
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 10, Train loss: 0.5747654642677307, Validation loss: 0.6853922595977783, Validation accuracy: 0.7805
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 11, Train loss: 0.5378656004714966, Validation loss: 0.6848310300827026, Validation accuracy: 0.7927
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 12, Train loss: 0.5107530553436279, Validation loss: 0.6105500598430633, Validation accuracy: 0.7932
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 13, Train loss: 0.5051570481300354, Validation loss: 0.650585540676117, Validation accuracy: 0.7854
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 14, Train loss: 0.4840482249069214, Validation loss: 0.8996675464630127, Validation accuracy: 0.7635
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 15, Train loss: 0.49631243920326235, Validation loss: 0.6857502833366395, Validation accuracy: 0.7835
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 16, Train loss: 0.4491174966621399, Validation loss: 0.625026757478714, Validation accuracy: 0.8063
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 17, Train loss: 0.4390239182949066, Validation loss: 0.6083573509216309, Validation accuracy: 0.8015
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 18, Train loss: 0.435939220495224, Validation loss: 0.5569264575004578, Validation accuracy: 0.8277
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 19, Train loss: 0.4345161499023438, Validation loss: 0.5703650276184082, Validation accuracy: 0.8175
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 20, Train loss: 0.4209125845336914, Validation loss: 0.5322817979812622, Validation accuracy: 0.8287
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 21, Train loss: 0.4032142776679993, Validation loss: 0.5420429401874542, Validation accuracy: 0.8266
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 22, Train loss: 0.4075854374885559, Validation loss: 0.5231220824241638, Validation accuracy: 0.8305
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 23, Train loss: 0.3934349574756622, Validation loss: 0.7348801518440247, Validation accuracy: 0.8197
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 24, Train loss: 0.3983795646238327, Validation loss: 0.5487916828155518, Validation accuracy: 0.8337
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 25, Train loss: 0.3920909411048889, Validation loss: 0.5511114521503448, Validation accuracy: 0.8235
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 26, Train loss: 0.38700216676712035, Validation loss: 0.4965315061569214, Validation accuracy: 0.8425
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 27, Train loss: 0.38475760009765625, Validation loss: 0.5207706797599793, Validation accuracy: 0.8392
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 28, Train loss: 0.37443212553977967, Validation loss: 0.6284204368591308, Validation accuracy: 0.7989
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 29, Train loss: 0.37837375427246095, Validation loss: 0.6691413692474365, Validation accuracy: 0.7835
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 30, Train loss: 0.3697441877937317, Validation loss: 0.5727664781808853, Validation accuracy: 0.8149
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 31, Train loss: 0.3749073565101623, Validation loss: 0.5280982376098633, Validation accuracy: 0.8437
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 32, Train loss: 0.36559372827529907, Validation loss: 0.5827683293819428, Validation accuracy: 0.8313
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 33, Train loss: 0.36873119523048403, Validation loss: 0.6073646626472473, Validation accuracy: 0.8186
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 34, Train loss: 0.3558614122772217, Validation loss: 0.6399404120922089, Validation accuracy: 0.8071
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 35, Train loss: 0.3515519895505905, Validation loss: 0.6442219099998474, Validation accuracy: 0.7955
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 36, Train loss: 0.3498574264431, Validation loss: 0.5880165063619613, Validation accuracy: 0.8479
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 37, Train loss: 0.34942841598510743, Validation loss: 0.6157945016384124, Validation accuracy: 0.812
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 38, Train loss: 0.3514968881225586, Validation loss: 1.0151625988960267, Validation accuracy: 0.769
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 39, Train loss: 0.3489285732460022, Validation loss: 0.45591944642066956, Validation accuracy: 0.857
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 40, Train loss: 0.33393082501411436, Validation loss: 0.5620238886356353, Validation accuracy: 0.8382
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 41, Train loss: 0.33642874000549317, Validation loss: 0.44627617154121396, Validation accuracy: 0.8527
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 42, Train loss: 0.33698207607269287, Validation loss: 0.46291288089752197, Validation accuracy: 0.8476
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 43, Train loss: 0.34593869787216186, Validation loss: 0.6381414073944092, Validation accuracy: 0.8386
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 44, Train loss: 0.33728434831619264, Validation loss: 0.8328091695785522, Validation accuracy: 0.7996
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 45, Train loss: 0.3289913970947266, Validation loss: 0.4742103541851044, Validation accuracy: 0.8425
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 46, Train loss: 0.3404393208694458, Validation loss: 0.5588390632629394, Validation accuracy: 0.8302
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 47, Train loss: 0.3398425282239914, Validation loss: 0.7666988006591797, Validation accuracy: 0.8046
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 48, Train loss: 0.3291152083969116, Validation loss: 0.4533391345977783, Validation accuracy: 0.8471
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 49, Train loss: 0.33364952673912046, Validation loss: 0.593327183675766, Validation accuracy: 0.8283
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 50, Train loss: 0.3169072035598755, Validation loss: 0.6468440882205964, Validation accuracy: 0.8347
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 51, Train loss: 0.3223949473667145, Validation loss: 0.5755986528396606, Validation accuracy: 0.8345
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 52, Train loss: 0.3343823554134369, Validation loss: 0.5734111938476563, Validation accuracy: 0.8373
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 53, Train loss: 0.3152780896854401, Validation loss: 0.5057597702026367, Validation accuracy: 0.8437
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 54, Train loss: 0.32157072122573854, Validation loss: 0.46072583742141726, Validation accuracy: 0.8549
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 55, Train loss: 0.31495563613891603, Validation loss: 0.6241914780378341, Validation accuracy: 0.8186
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 56, Train loss: 0.31135628900527956, Validation loss: 0.5257734203815461, Validation accuracy: 0.8415
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 57, Train loss: 0.3182988689994812, Validation loss: 0.48738379731178283, Validation accuracy: 0.843
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 58, Train loss: 0.31444256940841675, Validation loss: 0.6106986029624939, Validation accuracy: 0.8232
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 59, Train loss: 0.3130086988401413, Validation loss: 0.6418264823913574, Validation accuracy: 0.8098
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 60, Train loss: 0.3125287098407745, Validation loss: 0.49736331176757814, Validation accuracy: 0.8411
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 61, Train loss: 0.3162621445465088, Validation loss: 0.4630137844800949, Validation accuracy: 0.8566
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 62, Train loss: 0.31225817390441896, Validation loss: 0.41935134363174437, Validation accuracy: 0.8666
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 63, Train loss: 0.3170177055072784, Validation loss: 0.5307662304878235, Validation accuracy: 0.833
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 64, Train loss: 0.30951166524887086, Validation loss: 0.5845855276107788, Validation accuracy: 0.8143
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 65, Train loss: 0.3085246954917908, Validation loss: 0.5341737557888031, Validation accuracy: 0.8266
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 66, Train loss: 0.32698094522476195, Validation loss: 0.5354750140190124, Validation accuracy: 0.8427
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 67, Train loss: 0.31099863433837893, Validation loss: 0.7545083173751831, Validation accuracy: 0.7864
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 68, Train loss: 0.30394844781875613, Validation loss: 0.5081792079925537, Validation accuracy: 0.8329
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 69, Train loss: 0.30393571776390077, Validation loss: 0.482944264125824, Validation accuracy: 0.8476
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 70, Train loss: 0.311811200428009, Validation loss: 0.45375314359664914, Validation accuracy: 0.8482
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 71, Train loss: 0.30179377418518066, Validation loss: 0.5976427627563476, Validation accuracy: 0.8073
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 72, Train loss: 0.30200510880470277, Validation loss: 0.6755532678604126, Validation accuracy: 0.8214
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 73, Train loss: 0.3018319689273834, Validation loss: 0.7854019295692444, Validation accuracy: 0.7922
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 74, Train loss: 0.3062264867973328, Validation loss: 0.4977988650083542, Validation accuracy: 0.8466
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 75, Train loss: 0.30816994099617007, Validation loss: 0.4630970735549927, Validation accuracy: 0.8597
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 76, Train loss: 0.2959501482963562, Validation loss: 0.5236164155006409, Validation accuracy: 0.86
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 77, Train loss: 0.3008754407024384, Validation loss: 0.5451778318405152, Validation accuracy: 0.8347
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 78, Train loss: 0.29779338619232176, Validation loss: 0.42628418159484865, Validation accuracy: 0.87
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 79, Train loss: 0.3030121302986145, Validation loss: 0.7108672823905945, Validation accuracy: 0.7982
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 80, Train loss: 0.3040839450454712, Validation loss: 0.6871181757926941, Validation accuracy: 0.7932
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 81, Train loss: 0.30558403961658476, Validation loss: 0.48954259872436523, Validation accuracy: 0.8426
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 82, Train loss: 0.29500198121070864, Validation loss: 1.237341516494751, Validation accuracy: 0.732
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 83, Train loss: 0.30089028296470643, Validation loss: 0.54612571144104, Validation accuracy: 0.8358
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 84, Train loss: 0.29394241981506347, Validation loss: 0.4614784168720245, Validation accuracy: 0.8724
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 85, Train loss: 0.2941965527868271, Validation loss: 0.49003107352256775, Validation accuracy: 0.8443
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 86, Train loss: 0.29800672335624695, Validation loss: 0.5497810361862182, Validation accuracy: 0.8479
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 87, Train loss: 0.2949895378112793, Validation loss: 0.4555011805534363, Validation accuracy: 0.858
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 88, Train loss: 0.2919662220287323, Validation loss: 0.49183419094085695, Validation accuracy: 0.8435
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 89, Train loss: 0.2985684019088745, Validation loss: 0.4135290370941162, Validation accuracy: 0.8696
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 90, Train loss: 0.3025969191551208, Validation loss: 0.43460568571090696, Validation accuracy: 0.8526
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 91, Train loss: 0.2969091125202179, Validation loss: 0.8735599842071533, Validation accuracy: 0.7607
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 92, Train loss: 0.29280399636268617, Validation loss: 0.38198345823287966, Validation accuracy: 0.8732
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 93, Train loss: 0.29646499577999114, Validation loss: 0.5468240334987641, Validation accuracy: 0.8228
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 94, Train loss: 0.2993298757457733, Validation loss: 0.5045212413072586, Validation accuracy: 0.8424
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 95, Train loss: 0.28817068102836607, Validation loss: 0.5039739953994751, Validation accuracy: 0.8387
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 96, Train loss: 0.3057955480384827, Validation loss: 0.7542821072578431, Validation accuracy: 0.7766
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 97, Train loss: 0.28736900794029235, Validation loss: 0.4661298931121826, Validation accuracy: 0.8557
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 98, Train loss: 0.2905473060512543, Validation loss: 0.49346589918136596, Validation accuracy: 0.8422
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 99, Train loss: 0.2949309992313385, Validation loss: 0.4382930438041687, Validation accuracy: 0.8592
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 100, Train loss: 0.28160641735553743, Validation loss: 1.0493831605911255, Validation accuracy: 0.7961
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 101, Train loss: 0.16260895789146423, Validation loss: 0.28366859412193296, Validation accuracy: 0.9161
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 102, Train loss: 0.12449769190311431, Validation loss: 0.2733663502454758, Validation accuracy: 0.922
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 103, Train loss: 0.10872449048519134, Validation loss: 0.28346662425994873, Validation accuracy: 0.9226
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 104, Train loss: 0.10125601497650147, Validation loss: 0.28294107769727705, Validation accuracy: 0.9248
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 105, Train loss: 0.09362347561120987, Validation loss: 0.28480874559879304, Validation accuracy: 0.9241
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 106, Train loss: 0.08644384049534798, Validation loss: 0.29979200694561003, Validation accuracy: 0.9257
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 107, Train loss: 0.08237413273274899, Validation loss: 0.2900650160312653, Validation accuracy: 0.9262
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 108, Train loss: 0.07604851806879044, Validation loss: 0.3123996427774429, Validation accuracy: 0.9243
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 109, Train loss: 0.07356784653902054, Validation loss: 0.2949927873134613, Validation accuracy: 0.9263
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 110, Train loss: 0.06721061299234629, Validation loss: 0.3420915876865387, Validation accuracy: 0.9237
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 111, Train loss: 0.0696409471309185, Validation loss: 0.32108766505718234, Validation accuracy: 0.9258
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 112, Train loss: 0.06455790149211883, Validation loss: 0.31670938067436216, Validation accuracy: 0.9267
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 113, Train loss: 0.059155750230550766, Validation loss: 0.3275967636466026, Validation accuracy: 0.9268
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 114, Train loss: 0.057534387177228925, Validation loss: 0.3360410668373108, Validation accuracy: 0.9211
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 115, Train loss: 0.05526860190391541, Validation loss: 0.3658587540626526, Validation accuracy: 0.9218
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 116, Train loss: 0.05355763195991516, Validation loss: 0.35207570700645446, Validation accuracy: 0.923
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 117, Train loss: 0.054075613021850585, Validation loss: 0.349834987950325, Validation accuracy: 0.9263
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 118, Train loss: 0.0528929545044899, Validation loss: 0.32921563305854795, Validation accuracy: 0.9257
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 119, Train loss: 0.04878204565703869, Validation loss: 0.36123720774650575, Validation accuracy: 0.9231
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 120, Train loss: 0.04915402775943279, Validation loss: 0.34656629559993746, Validation accuracy: 0.9214
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 121, Train loss: 0.04742332262992859, Validation loss: 0.38571053125858307, Validation accuracy: 0.9232
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 122, Train loss: 0.04706101697921753, Validation loss: 0.374262486743927, Validation accuracy: 0.9229
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 123, Train loss: 0.045177014803290366, Validation loss: 0.3969880150079727, Validation accuracy: 0.922
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 124, Train loss: 0.04601824841141701, Validation loss: 0.35833305833935736, Validation accuracy: 0.9236
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 125, Train loss: 0.04240080477803945, Validation loss: 0.3962269724369049, Validation accuracy: 0.924
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 126, Train loss: 0.04216027462601662, Validation loss: 0.387424093747139, Validation accuracy: 0.9203
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 127, Train loss: 0.041779151203632355, Validation loss: 0.3887927711009979, Validation accuracy: 0.9212
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 128, Train loss: 0.04297156317055226, Validation loss: 0.37649691824913023, Validation accuracy: 0.926
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 129, Train loss: 0.041216064845323565, Validation loss: 0.38105505242347715, Validation accuracy: 0.9254
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 130, Train loss: 0.04158390686482191, Validation loss: 0.42067982573509216, Validation accuracy: 0.9196
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 131, Train loss: 0.04265367478817701, Validation loss: 0.39879597067832945, Validation accuracy: 0.9187
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 132, Train loss: 0.04179753915518522, Validation loss: 0.39666335134506225, Validation accuracy: 0.9215
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 133, Train loss: 0.039761132805347446, Validation loss: 0.41555315160751344, Validation accuracy: 0.9195
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 134, Train loss: 0.0409248627269268, Validation loss: 0.384408660697937, Validation accuracy: 0.9244
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 135, Train loss: 0.039285079497098925, Validation loss: 0.3900816868782043, Validation accuracy: 0.9198
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 136, Train loss: 0.03951496947929263, Validation loss: 0.41382487869262696, Validation accuracy: 0.9242
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 137, Train loss: 0.040216515347361564, Validation loss: 0.41668487491607664, Validation accuracy: 0.9191
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 138, Train loss: 0.036703434189260004, Validation loss: 0.43203694534301756, Validation accuracy: 0.9222
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 139, Train loss: 0.03841155328124762, Validation loss: 0.4021750467300415, Validation accuracy: 0.9247
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 140, Train loss: 0.037587832312583926, Validation loss: 0.43478674426078795, Validation accuracy: 0.9208
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 141, Train loss: 0.03945517917692661, Validation loss: 0.39778302192687987, Validation accuracy: 0.9215
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 142, Train loss: 0.03847574793547392, Validation loss: 0.4160554663658142, Validation accuracy: 0.9193
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 143, Train loss: 0.03640828287690878, Validation loss: 0.4141481966018677, Validation accuracy: 0.9222
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 144, Train loss: 0.036285128037929534, Validation loss: 0.4290495876312256, Validation accuracy: 0.9171
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 145, Train loss: 0.038912337625622746, Validation loss: 0.3922878047943115, Validation accuracy: 0.9216
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 146, Train loss: 0.03849473075211048, Validation loss: 0.41281432123184203, Validation accuracy: 0.9182
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 147, Train loss: 0.03764831333011389, Validation loss: 0.48941244676113127, Validation accuracy: 0.916
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 148, Train loss: 0.039985623294115064, Validation loss: 0.41654239320755004, Validation accuracy: 0.9208
+Adjusting learning rate of group 0 to 1.0000e-02.
+Epoch: 149, Train loss: 0.03979840929567814, Validation loss: 0.4276497161865234, Validation accuracy: 0.9187
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 150, Train loss: 0.03713003366023302, Validation loss: 0.42135346646308897, Validation accuracy: 0.922
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 151, Train loss: 0.024603999836444856, Validation loss: 0.4047440437793732, Validation accuracy: 0.9285
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 152, Train loss: 0.0165772530682385, Validation loss: 0.4334675808906555, Validation accuracy: 0.9288
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 153, Train loss: 0.014947085428908467, Validation loss: 0.45397932114601136, Validation accuracy: 0.9291
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 154, Train loss: 0.013686797550171614, Validation loss: 0.45538067278862, Validation accuracy: 0.93
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 155, Train loss: 0.013471675150617956, Validation loss: 0.46199941844940184, Validation accuracy: 0.9294
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 156, Train loss: 0.011346691412217915, Validation loss: 0.46543702092170713, Validation accuracy: 0.93
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 157, Train loss: 0.011414996378775686, Validation loss: 0.4791626937866211, Validation accuracy: 0.9307
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 158, Train loss: 0.01017717228576541, Validation loss: 0.4796790774822235, Validation accuracy: 0.9302
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 159, Train loss: 0.01196606152344495, Validation loss: 0.4909892474174499, Validation accuracy: 0.9308
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 160, Train loss: 0.009949564236290754, Validation loss: 0.49292907872200015, Validation accuracy: 0.931
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 161, Train loss: 0.008752294871155173, Validation loss: 0.49941739950180053, Validation accuracy: 0.9302
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 162, Train loss: 0.008348341699112206, Validation loss: 0.5142113575935364, Validation accuracy: 0.9308
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 163, Train loss: 0.008126748462175018, Validation loss: 0.5258086510658264, Validation accuracy: 0.9302
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 164, Train loss: 0.008421493639228865, Validation loss: 0.5348173949718475, Validation accuracy: 0.9297
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 165, Train loss: 0.00803552564797923, Validation loss: 0.5373411784648895, Validation accuracy: 0.9294
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 166, Train loss: 0.008377752859443427, Validation loss: 0.5278036011695861, Validation accuracy: 0.931
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 167, Train loss: 0.007514395056003704, Validation loss: 0.5371281847000122, Validation accuracy: 0.9304
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 168, Train loss: 0.007855207183498424, Validation loss: 0.5411930108070373, Validation accuracy: 0.9303
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 169, Train loss: 0.0080548766052071, Validation loss: 0.5415097507953643, Validation accuracy: 0.9305
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 170, Train loss: 0.007317953356634825, Validation loss: 0.5430151165008545, Validation accuracy: 0.9313
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 171, Train loss: 0.007372782875448465, Validation loss: 0.550359521150589, Validation accuracy: 0.9318
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 172, Train loss: 0.0066890387694910165, Validation loss: 0.5470518991470337, Validation accuracy: 0.931
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 173, Train loss: 0.006818871750119142, Validation loss: 0.5699194133281708, Validation accuracy: 0.9296
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 174, Train loss: 0.006046805146047845, Validation loss: 0.5674158535003662, Validation accuracy: 0.9311
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 175, Train loss: 0.006510662574917078, Validation loss: 0.567305326795578, Validation accuracy: 0.9302
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 176, Train loss: 0.006586166112739593, Validation loss: 0.5747877336025238, Validation accuracy: 0.9303
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 177, Train loss: 0.0058705655962368476, Validation loss: 0.583573771572113, Validation accuracy: 0.929
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 178, Train loss: 0.005840303391660564, Validation loss: 0.569287527513504, Validation accuracy: 0.9308
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 179, Train loss: 0.0055458680605515835, Validation loss: 0.5712977393150329, Validation accuracy: 0.9318
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 180, Train loss: 0.005844774536220357, Validation loss: 0.5812710995674133, Validation accuracy: 0.9305
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 181, Train loss: 0.0055662447234429415, Validation loss: 0.5827386303901673, Validation accuracy: 0.9298
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 182, Train loss: 0.005543222278393805, Validation loss: 0.5847565552711487, Validation accuracy: 0.9308
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 183, Train loss: 0.005630507982866839, Validation loss: 0.5765393596172332, Validation accuracy: 0.9315
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 184, Train loss: 0.0052215939856693145, Validation loss: 0.5956797882556916, Validation accuracy: 0.9296
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 185, Train loss: 0.005574124122010544, Validation loss: 0.5782399105787277, Validation accuracy: 0.9304
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 186, Train loss: 0.006387689857715741, Validation loss: 0.576529523575306, Validation accuracy: 0.9309
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 187, Train loss: 0.005259235348617658, Validation loss: 0.5818985495328903, Validation accuracy: 0.9318
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 188, Train loss: 0.005598384089823812, Validation loss: 0.5782355971693992, Validation accuracy: 0.9304
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 189, Train loss: 0.004932617890145629, Validation loss: 0.587619259762764, Validation accuracy: 0.9303
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 190, Train loss: 0.004709984590355307, Validation loss: 0.5946925148010254, Validation accuracy: 0.9299
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 191, Train loss: 0.0052094851508783175, Validation loss: 0.6017493857860565, Validation accuracy: 0.9316
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 192, Train loss: 0.004629238637236413, Validation loss: 0.5989703279495239, Validation accuracy: 0.9302
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 193, Train loss: 0.004545035726656206, Validation loss: 0.5983861230850219, Validation accuracy: 0.9312
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 194, Train loss: 0.005010767092108726, Validation loss: 0.611381533241272, Validation accuracy: 0.9296
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 195, Train loss: 0.0035089385857619347, Validation loss: 0.6073711499691009, Validation accuracy: 0.9323
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 196, Train loss: 0.004711182692763396, Validation loss: 0.6103517458677292, Validation accuracy: 0.9321
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 197, Train loss: 0.004769576432695612, Validation loss: 0.6092523430585861, Validation accuracy: 0.9315
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 198, Train loss: 0.0038152472610166297, Validation loss: 0.6165699203968048, Validation accuracy: 0.9306
+Adjusting learning rate of group 0 to 1.0000e-03.
+Epoch: 199, Train loss: 0.0036689925375871825, Validation loss: 0.6328151663780213, Validation accuracy: 0.931
+Accuracy: 0.931, Parameters: 686
