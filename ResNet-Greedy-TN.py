@@ -27,9 +27,15 @@ parser.add_argument("--pretrained_filename", type=str, default=None)
 parser.add_argument("--classifier", type=str, default="full")
 parser.add_argument("--network", type=str, default="resnet")
 parser.add_argument("--iterations", default=20, type=int)
+parser.add_argument("--constrain", type=str)
 args = parser.parse_args()
 
 print(sys.argv)
+
+if args.constrain is None:
+    constrain = [[1] * (len(args.tensorization) + 1) for i in range(len(args.tensorization) + 1)]
+else:
+    constrain = json.loads(args.constrain)
 
 print("Initializing dataloader")
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -73,7 +79,7 @@ if args.classifier == "full":
     model.classifier = nn.Sequential(
         nn.Flatten(),
         nn.Unflatten(1, tuple(args.tensorization)),
-        FullLinkedLayer(tuple(args.tensorization), (10,), [[1] * n_factors for i in range(n_factors)]),
+        FullLinkedLayer(tuple(args.tensorization), (10,), [[1] * n_factors for i in range(n_factors)], edge_mask=constrain),
     )
 elif args.classifier == "ringed":
     model.classifier = nn.Sequential(
@@ -97,8 +103,7 @@ device = args.device if torch.cuda.is_available() else torch.device("cpu")
 model = model.to(device)
 print("Model initialized")
 
-for core in get_layer(model).construct_network():
-    print(core.name, core.shape)
+print(*get_layer(model).ranks(),sep="\n")
 
 print("Testing model")
 all_losses, predicted_labels, true_labels = predict(model, val_dataloader, criterion, device)
@@ -143,8 +148,7 @@ print("Stop warm up model")
 
 print("Choosign ranks")
 def train_edge(model):
-    for core in get_layer(model).construct_network():
-        print(core.name, core.shape)
+    print(*get_layer(model).ranks(),sep="\n")
     optimizer = torch.optim.SGD(get_layer(model).parameters(), lr=args.learning_rate, momentum=0.9)
     print("Before train edge")
     train(model, train_val_dataloader, val_dataloader, criterion, optimizer, scheduler=None, n_epochs=args.edge_train, device=device)
@@ -162,19 +166,14 @@ for i in range(args.iterations):
             param.requires_grad = True
     optimizer = torch.optim.SGD(model.parameters(), lr=args.learning_rate, momentum=0.9)
     print("Train full model")
-    for core in get_layer(model).construct_network():
-        print(core.name, core.shape)
+    print(*get_layer(model).ranks(),sep="\n")
     train(model, train_dataloader, val_dataloader, criterion, optimizer, scheduler=None, n_epochs=args.full_train, device=device)
     choose_and_increase_edge(model, "classifier", train_edge, args.slice_gain, device, get_layer=get_layer, set_layer=set_layer)
     print("After step {}".format(i))
-    ranks = []
-    for factor in get_layer(model).factors:
-        ranks.append(factor.shape)
-    print("--ranks '{}'".format(json.dumps(ranks)))
+    print("--ranks '{}'".format(json.dumps(get_layer(model).ranks())))
 
 print("Tensor shapes")
-for core in get_layer(model).construct_network():
-    print(core.name, core.shape)
+print(*get_layer(model).ranks(),sep="\n")
 
 # print("Fine tuning")
 # for param in model.parameters():

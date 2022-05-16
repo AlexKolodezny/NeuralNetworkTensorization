@@ -20,35 +20,51 @@ class FullLinkedLayer(nn.Module):
         input_shape: Tuple[int, ...],
         output_shape: Tuple[int, ...],
         ranks: List[List[int]],
+        edge_mask: List[List[int]] = None,
         bias: bool = True,
         gain: float = 1,
         device=None,
         dtype=None
     ) -> None:
         assert np.all(np.array(ranks) == np.array(ranks).T)
+        assert np.all(np.array(edge_mask) == np.array(edge_mask).T)
         assert len(ranks) == len(input_shape) + len(output_shape)
+
+        if edge_mask == None:
+            edge_mask = [[1] * len(ranks) for i in range(len(ranks))]
 
         factory_kwargs = {"device": device, "dtype": dtype}
         super(FullLinkedLayer, self).__init__()
 
         self.input_shape = input_shape
         self.output_shape = output_shape
-        self.ranks = deepcopy(ranks)
+        ranks_copy = deepcopy(ranks)
         self.shape = self.input_shape + self.output_shape
         self.gain = gain
+        self.edge_mask = deepcopy(edge_mask)
         for i, dim in enumerate(self.shape):
-            self.ranks[i][i] = dim
+            ranks_copy[i][i] = dim
+            self.edge_mask[i][i] = 1
         if bias:
             self.bias = Parameter(torch.empty(self.output_shape, **factory_kwargs))
         else:
             self.register_parameter("bias", None)
         self.factors = nn.ParameterList([
-            Parameter(torch.empty(self.ranks[i],
+            Parameter(torch.empty(list(np.array(ranks_copy[i])[np.array(self.edge_mask[i])==1]),
                 **factory_kwargs))
             for i in range(len(self.shape))
         ])
         self.masks = {}
         self.reset_parameters()
+    
+    def ranks(self):
+        ranks = [[1] * len(self.shape) for i in range(len(self.shape))]
+        for i, _ in enumerate(self.factors):
+            for j, dim in zip(np.arange(len(self.shape))[np.array(self.edge_mask[i])==1], self.factors[i].shape):
+                ranks[i][j] = dim
+        for i, dim in enumerate(self.shape):
+            ranks[i][i] = dim
+        return ranks
     
     def clear_masks(self):
         self.masks = {}
@@ -72,14 +88,15 @@ class FullLinkedLayer(nn.Module):
             tn.Node(
                 self.masked_tensor(self.factors[i], f"factor_{i}"),
                 name=f"factor_{i}",
-                axis_names=[f"rank_{i}{j}" for j, _ in enumerate(self.factors[i].shape)],
+                axis_names=[f"rank_{i}{j}" for j in np.arange(len(self.shape))[np.array(self.edge_mask[i])==1]],
                 backend="pytorch")
             for i, _ in enumerate(self.factors)
         ]
         result_cores = factors
         for i, _ in enumerate(factors):
-            for j, _ in enumerate(factors[:i]):
-                factors[i][f"rank_{i}{j}"] ^ factors[j][f"rank_{j}{i}"]
+            for j in np.arange(len(self.shape))[np.array(self.edge_mask[i])==1]:
+                if j < i:
+                    factors[i][f"rank_{i}{j}"] ^ factors[j][f"rank_{j}{i}"]
         if input is not None:
             for i, _ in enumerate(self.input_shape):
                 tensor[f"in_{i}"] ^ factors[i][f"rank_{i}{i}"]
