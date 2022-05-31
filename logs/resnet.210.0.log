@@ -1,0 +1,36 @@
+['ResNet-train.py', '--network', 'resnet110', '--classifier', 'full', '--tensorization', '4', '4', '4', '4', '4', '4', '--ranks', '[[4, 2, 1, 1, 1, 1, 1], [2, 4, 1, 1, 1, 1, 1], [1, 1, 4, 1, 1, 1, 2], [1, 1, 1, 4, 1, 1, 2], [1, 1, 1, 1, 4, 2, 1], [1, 1, 1, 1, 2, 4, 1], [1, 1, 2, 2, 1, 1, 10]]', '--seed', '210', '--device', 'cuda:3']
+Initializing dataloader
+Files already downloaded and verified
+Files already downloaded and verified
+Dataloader has initialized
+Initializing model
+Adjusting learning rate of group 0 to 1.0000e-02.
+Model initialized
+Testing model
+Tests passed
+Adjusting learning rate of group 0 to 2.0000e-02.
+Epoch: 0, Train loss: 2.0569551372528077, Validation loss: 1.7457705801010133, Validation accuracy: 0.3142
+Adjusting learning rate of group 0 to 3.0000e-02.
+Epoch: 1, Train loss: 1.6977311285018921, Validation loss: 1.515892646217346, Validation accuracy: 0.4314
+Adjusting learning rate of group 0 to 4.0000e-02.
+Epoch: 2, Train loss: 1.4735884372329713, Validation loss: 1.2759172458648682, Validation accuracy: 0.5337
+Adjusting learning rate of group 0 to 5.0000e-02.
+Epoch: 3, Train loss: 1.2338242903900147, Validation loss: 1.0707915752410888, Validation accuracy: 0.6161
+Adjusting learning rate of group 0 to 6.0000e-02.
+Epoch: 4, Train loss: 1.0882310607528687, Validation loss: 1.1173622812271118, Validation accuracy: 0.6114
+Adjusting learning rate of group 0 to 7.0000e-02.
+Epoch: 5, Train loss: 0.9675251378250123, Validation loss: 0.881607365322113, Validation accuracy: 0.6915
+Adjusting learning rate of group 0 to 8.0000e-02.
+Epoch: 6, Train loss: 0.9001137281417847, Validation loss: 1.089399686050415, Validation accuracy: 0.6451
+Adjusting learning rate of group 0 to 9.0000e-02.
+Epoch: 7, Train loss: 0.8626886267852784, Validation loss: 1.1293711542129516, Validation accuracy: 0.5912
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 8, Train loss: 0.7847690600395203, Validation loss: 0.8537302283287048, Validation accuracy: 0.7138
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 9, Train loss: 0.7556925526428223, Validation loss: 0.9069208143234253, Validation accuracy: 0.7041
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 10, Train loss: 0.7153841159248352, Validation loss: 1.186144037437439, Validation accuracy: 0.7314
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 11, Train loss: 0.6445908661460876, Validation loss: 0.8291868538856506, Validation accuracy: 0.746
+Adjusting learning rate of group 0 to 1.0000e-01.
+Epoch: 12, Train loss: 0.6166091920852661, Validation loss: 0.8477057055950165, Validation accuracy: 0.7617
